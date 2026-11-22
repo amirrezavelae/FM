@@ -1,0 +1,670 @@
+{
+  "args": {
+    "model": "Qwen/Qwen2.5-7B",
+    "classes": [
+      "common",
+      "rare",
+      "novel"
+    ],
+    "extra_list": null,
+    "n_per_class": 40,
+    "frac_3plus": 0.3,
+    "common_min_count": 10,
+    "depths": [
+      0.1,
+      0.5,
+      0.9
+    ],
+    "n_hay_tokens": 2000,
+    "windows": [
+      "0:16",
+      "0:24",
+      "16:28",
+      "24:28",
+      "0:28"
+    ],
+    "conditions": [
+      "needle_prefix",
+      "needle_last",
+      "needle_all",
+      "random_hay",
+      "all_words",
+      "random_all"
+    ],
+    "variants": [
+      "deploy"
+    ],
+    "random_seeds": 3,
+    "max_new_tokens": 10,
+    "generate_all": false,
+    "seed": 0,
+    "dtype": "float32",
+    "attn": "eager",
+    "hook_tol": 0.001,
+    "bootstrap": 1000,
+    "out_dir": "results/needle",
+    "preview": 0,
+    "summarize_only": false,
+    "resume": false,
+    "overwrite": false
+  },
+  "n_layers": 28,
+  "hook_check": {
+    "empty_drop_vs_default_maxdiff": 0.0,
+    "empty_drop_argmax_equal": true,
+    "big_drop_vs_default_maxdiff": 16.948617935180664,
+    "ok": true
+  },
+  "window_check": {
+    "A_window_full_vs_old_s0": 0.0,
+    "B_window_last_vs_old_s_last": 0.0,
+    "C_layer0_only_vs_plain": 1.84737229347229,
+    "D_lower_half_vs_plain": 11.607486724853516,
+    "D_upper_half_vs_plain": 11.339996337890625,
+    "ok": true
+  },
+  "needles": [
+    {
+      "word": "vertebrae",
+      "cls": "common",
+      "pieces": 3
+    },
+    {
+      "word": "ironclads",
+      "cls": "common",
+      "pieces": 3
+    },
+    {
+      "word": "cemeteries",
+      "cls": "common",
+      "pieces": 4
+    },
+    {
+      "word": "temnospondyls",
+      "cls": "common",
+      "pieces": 5
+    },
+    {
+      "word": "battalions",
+      "cls": "common",
+      "pieces": 3
+    },
+    {
+      "word": "temnospondyl",
+      "cls": "common",
+      "pieces": 4
+    },
+    {
+      "word": "extratropical",
+      "cls": "common",
+      "pieces": 3
+    },
+    {
+      "word": "epoxidation",
+      "cls": "common",
+      "pieces": 3
+    },
+    {
+      "word": "repulsed",
+      "cls": "common",
+      "pieces": 3
+    },
+    {
+      "word": "torpedoes",
+      "cls": "common",
+      "pieces": 3
+    },
+    {
+      "word": "tetrapods",
+      "cls": "common",
+      "pieces": 3
+    },
+    {
+      "word": "stereospondyls",
+      "cls": "common",
+      "pieces": 5
+    },
+    {
+      "word": "southward",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "amphibious",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "barangays",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "superstructure",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "broadside",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "turrets",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "riparian",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "dissipating",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "dismantled",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "cruisers",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "bombardment",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "headstone",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "squadrons",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "governess",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "archaeologists",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "pyramids",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "airfield",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "typhoon",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "marines",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "armament",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "gunboats",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "cyclone",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "pounder",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "frigate",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "descends",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "gammarus",
+      "cls": "common",
+      "pieces": 3
+    },
+    {
+      "word": "excavated",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "landfall",
+      "cls": "common",
+      "pieces": 2
+    },
+    {
+      "word": "headhunting",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "ridgelines",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "trisikads",
+      "cls": "rare",
+      "pieces": 4
+    },
+    {
+      "word": "dioxiranes",
+      "cls": "rare",
+      "pieces": 4
+    },
+    {
+      "word": "befriended",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "longirostrine",
+      "cls": "rare",
+      "pieces": 4
+    },
+    {
+      "word": "paramilitaries",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "invertebrates",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "jackrabbits",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "misfortunes",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "connoisseur",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "unpreparedness",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "tasselled",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "offshoots",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "disapproval",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "gravestone",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "treacherous",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "battlegroup",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "hesitated",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "constrains",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "mediocrity",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "impeachments",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "accountancy",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "brutalizing",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "compounding",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "superplex",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "unremarkable",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "dissimilar",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "minefields",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "ultimatum",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "contended",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "nobiliter",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "redefined",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "mammilloid",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "obsolescent",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "atmospheres",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "justifying",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "indescribable",
+      "cls": "rare",
+      "pieces": 4
+    },
+    {
+      "word": "prostrated",
+      "cls": "rare",
+      "pieces": 3
+    },
+    {
+      "word": "cannonades",
+      "cls": "rare",
+      "pieces": 2
+    },
+    {
+      "word": "nirmetufapim",
+      "cls": "novel",
+      "pieces": 6
+    },
+    {
+      "word": "leligago",
+      "cls": "novel",
+      "pieces": 3
+    },
+    {
+      "word": "zozure",
+      "cls": "novel",
+      "pieces": 3
+    },
+    {
+      "word": "vopetiszo",
+      "cls": "novel",
+      "pieces": 5
+    },
+    {
+      "word": "nazepabeval",
+      "cls": "novel",
+      "pieces": 4
+    },
+    {
+      "word": "vorepuse",
+      "cls": "novel",
+      "pieces": 4
+    },
+    {
+      "word": "lestenmivenfel",
+      "cls": "novel",
+      "pieces": 5
+    },
+    {
+      "word": "dazonkageva",
+      "cls": "novel",
+      "pieces": 5
+    },
+    {
+      "word": "tordezusu",
+      "cls": "novel",
+      "pieces": 3
+    },
+    {
+      "word": "mismentevogon",
+      "cls": "novel",
+      "pieces": 5
+    },
+    {
+      "word": "pikaszeso",
+      "cls": "novel",
+      "pieces": 3
+    },
+    {
+      "word": "tomfuko",
+      "cls": "novel",
+      "pieces": 3
+    },
+    {
+      "word": "rogopur",
+      "cls": "novel",
+      "pieces": 3
+    },
+    {
+      "word": "zelbiso",
+      "cls": "novel",
+      "pieces": 4
+    },
+    {
+      "word": "gulfimikirka",
+      "cls": "novel",
+      "pieces": 6
+    },
+    {
+      "word": "zobinzaronma",
+      "cls": "novel",
+      "pieces": 4
+    },
+    {
+      "word": "ganumrimtur",
+      "cls": "novel",
+      "pieces": 4
+    },
+    {
+      "word": "rontefibumu",
+      "cls": "novel",
+      "pieces": 5
+    },
+    {
+      "word": "virfosegus",
+      "cls": "novel",
+      "pieces": 4
+    },
+    {
+      "word": "gitivansen",
+      "cls": "novel",
+      "pieces": 3
+    },
+    {
+      "word": "tofavilo",
+      "cls": "novel",
+      "pieces": 3
+    },
+    {
+      "word": "vomtigolta",
+      "cls": "novel",
+      "pieces": 4
+    },
+    {
+      "word": "gegisulizas",
+      "cls": "novel",
+      "pieces": 5
+    },
+    {
+      "word": "tusvevu",
+      "cls": "novel",
+      "pieces": 3
+    },
+    {
+      "word": "gespomdi",
+      "cls": "novel",
+      "pieces": 4
+    },
+    {
+      "word": "verorkakamto",
+      "cls": "novel",
+      "pieces": 5
+    },
+    {
+      "word": "kibesbi",
+      "cls": "novel",
+      "pieces": 4
+    },
+    {
+      "word": "bereka",
+      "cls": "novel",
+      "pieces": 2
+    },
+    {
+      "word": "mabepobote",
+      "cls": "novel",
+      "pieces": 5
+    },
+    {
+      "word": "vumdifobobal",
+      "cls": "novel",
+      "pieces": 6
+    },
+    {
+      "word": "ruslisubeke",
+      "cls": "novel",
+      "pieces": 4
+    },
+    {
+      "word": "lukatokata",
+      "cls": "novel",
+      "pieces": 4
+    },
+    {
+      "word": "guvemdefata",
+      "cls": "novel",
+      "pieces": 5
+    },
+    {
+      "word": "punvuvu",
+      "cls": "novel",
+      "pieces": 4
+    },
+    {
+      "word": "forigerdodes",
+      "cls": "novel",
+      "pieces": 4
+    },
+    {
+      "word": "bidakinranfam",
+      "cls": "novel",
+      "pieces": 5
+    },
+    {
+      "word": "bevominaza",
+      "cls": "novel",
+      "pieces": 3
+    },
+    {
+      "word": "lenbepevomgim",
+      "cls": "novel",
+      "pieces": 7
+    },
+    {
+      "word": "zasupe",
+      "cls": "novel",
+      "pieces": 3
+    },
+    {
+      "word": "babenivezu",
+      "cls": "novel",
+      "pieces": 4
+    }
+  ],
+  "torch": "2.6.0+cu124",
+  "transformers": "5.23.0"
+}

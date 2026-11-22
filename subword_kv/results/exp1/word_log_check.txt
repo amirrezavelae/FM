@@ -1,0 +1,189 @@
+62 test articles, 200 chunks (512 ctx + 64 cont + 1 target tokens each)
+====================================================================================================
+wt103-test-a0-t793  k=58  drop_frac=0.113
+context starts: ' now unrecognisable from his performance as Trevor Nunn \'s Hamlet ) , Robert Boulter , Shane Zaza and Fraser Ayres . " The Guardian noted , " Ben Whishaw and Ro'
+
+  DROPPED WORDS (42):  word | pieces | dropped positions
+    unrecognisable       [' un', 'recogn', 'isable']                [1, 2]
+    Nunn                 [' N', 'unn']                              [9]
+    Hamlet               [' Ham', 'let']                            [13]
+    Boulter              [' B', 'oul', 'ter']                       [18, 19]
+    Zaza                 [' Z', 'aza']                              [23]
+    Ayres                [' Ay', 'res']                             [27]
+    Whishaw              [' Wh', 'ish', 'aw']                       [37, 38]
+    Boulter              [' B', 'oul', 'ter']                       [42, 43]
+    tenderness           [' tend', 'erness']                        [46]
+    savagery             [' sav', 'ag', 'ery']                      [50, 51]
+    Boulter              [' B', 'oul', 'ter']                       [76, 77]
+    Ravenhill            [' Raven', 'hill']                         [87]
+    playwrights          [' playwright', 's']                       [100]
+    Chatroom             [' Chat', 'room']                          [106]
+    Whishaw              [' Wh', 'ish', 'aw']                       [123, 124]
+    Boulter              [' B', 'oul', 'ter']                       [127, 128]
+    Boulter              [' B', 'oul', 'ter']                       [150, 151]
+    Chatroom             [' Chat', 'room']                          [163]
+    Ate                  [' A', 'te']                               [205]
+    Boulter              [' B', 'oul', 'ter']                       [209, 210]
+    Josie                [' Jos', 'ie']                             [231]
+    Rourke               [' R', 'ourke']                            [233]
+    Hammersmith          [' H', 'ammers', 'mith']                   [249, 250]
+    Fulham               [' Ful', 'ham']                            [253]
+    Boulter              [' B', 'oul', 'ter']                       [275, 276]
+    Boulter              [' B', 'oul', 'ter']                       [290, 291]
+    Daylight             [' Day', 'light']                          [304]
+    Robbery              [' Rob', 'bery']                           [306]
+    Leonti               [' Le', 'ont', 'i']                        [311, 312]
+    Donkey               [' Don', 'key']                            [316]
+    Olly                 [' Ol', 'ly']                              [321]
+    Boulter              [' B', 'oul', 'ter']                       [325, 326]
+    Donkey               [' Don', 'key']                            [336]
+    Tammi                [' Tam', 'mi']                             [359]
+    Boulter              [' B', 'oul', 'ter']                       [363, 364]
+    Wounds               [' W', 'ounds']                            [378]
+    Waking               [' W', 'aking']                            [392]
+    Dearden              [' De', 'arden']                           [400]
+    Survivors            [' Surv', 'ivors']                         [410]
+    Casualty             [' Casual', 'ty']                          [436]
+    ... 2 more
+
+  EXCLUDED WORDS: {'single_token': 282}
+
+  (context text span: chars 3208-5344)
+====================================================================================================
+wt103-test-a1-t197  k=27  drop_frac=0.053
+context starts: ' the range of his work has allowed him to be introduced to Western readers as " the Chinese Virgil , Horace , Ovid , Shakespeare , Milton , Burns , Wordsworth ,'
+
+  DROPPED WORDS (21):  word | pieces | dropped positions
+    Virgil               [' Vir', 'gil']                            [18]
+    Horace               [' Hor', 'ace']                            [21]
+    Ovid                 [' O', 'vid']                              [24]
+    Wordsworth           [' Words', 'worth']                        [33]
+    Béranger             [' B', 'ér', 'anger']                      [36, 37]
+    Baudelaire           [' B', 'aud', 'ela', 'ire']                [42, 43, 44]
+    posits               [' pos', 'its']                            [85]
+    omitting             [' omit', 'ting']                          [131]
+    reductive            [' re', 'ductive']                         [234]
+    categorizations      [' categor', 'izations']                   [237]
+    Shenyan              [' Shen', 'yan']                           [276]
+    Empress              [' Emp', 'ress']                           [288]
+    birthplace           [' birth', 'place']                        [304]
+    Luoyang              [' Lu', 'oy', 'ang']                       [314, 315]
+    Henan                [' Hen', 'an']                             [318]
+    stepmother           [' step', 'mother']                        [412]
+    memorisation         [' memor', 'isation']                      [443]
+    Confucian            [' Conf', 'uc', 'ian']                     [447, 448]
+    creditable           [' credit', 'able']                        [464]
+    Jiangsu              [' Jiang', 'su']                           [492]
+    Zhejiang             [' Z', 'he', 'jiang']                      [495, 496]
+
+  EXCLUDED WORDS: {'single_token': 367}
+
+  (context text span: chars 839-3283)
+====================================================================================================
+wt103-test-a1-t4236  k=65  drop_frac=0.127
+context starts: ' set the stage for every subsequent writer in the genre . \n In the 20th century , he was the favourite poet of Kenneth Rexroth , who has described him as " the '
+
+  DROPPED WORDS (38):  word | pieces | dropped positions
+    Rexroth              [' Rex', 'ro', 'th']                       [27, 28]
+    perceiving           [' per', 'ceiving']                        [79]
+    Muromachi            [' Mu', 'rom', 'achi']                     [116, 117]
+    Edo                  [' E', 'do']                               [127]
+    Matsuo               [' Mats', 'uo']                            [132]
+    Bashō                [' Bash', 'ō']                             [134]
+    haiku                [' ha', 'iku']                             [142]
+    詩聖                   [' �', '�', '�', '聖']                      [157, 158, 159]
+    shisei               [' sh', 'ise', 'i']                        [162, 163]
+    Juyi                 [' J', 'uy', 'i']                          [186, 187]
+    kanshi               [' kans', 'hi']                            [209]
+    anthologies          [' anth', 'ologies']                       [221]
+    Bunka                [' B', 'unk', 'a']                         [225, 226]
+    Shūreishū            [' Sh', 'ū', 're', 'ish', 'ū']             [228, 229, 230, 231]
+    appreciator          [' apprec', 'iator']                       [244]
+    Kokan                [' Kok', 'an']                             [253]
+    Shiren               [' Sh', 'iren']                            [255]
+    Rinzai               [' R', 'inz', 'ai']                        [272, 273]
+    Saihokushū           [' Sai', 'h', 'ok', 'ush', 'ū']            [321, 322, 323, 324]
+    Chūgan               [' Ch', 'ū', 'gan']                        [329, 330]
+    Engetsu              [' En', 'gets', 'u']                       [332, 333]
+    kanshi               [' kans', 'hi']                            [337]
+    prefaces             [' pre', 'faces']                          [351]
+    Chūgan               [' Ch', 'ū', 'gan']                        [354, 355]
+    Gidō                 [' G', 'id', 'ō']                          [360, 361]
+    Shūshin              [' Sh', 'ū', 'sh', 'in']                   [363, 364, 365]
+    Ashikaga             [' Ash', 'ik', 'aga']                      [374, 375]
+    Shogunate            [' Sh', 'og', 'unate']                     [377, 378]
+    Nijō                 [' N', 'ij', 'ō']                          [394, 395]
+    Yoshimoto            [' Yosh', 'imoto']                         [397]
+    Kampaku              [' Kamp', 'aku']                           [401]
+    regent               [' reg', 'ent']                            [403]
+    renga                [' re', 'nga']                             [413]
+    Gidō                 [' G', 'id', 'ō']                          [418, 419]
+    Gidō                 [' G', 'id', 'ō']                          [436, 437]
+    aristocratic         [' arist', 'ocratic']                      [479]
+    Muromachi            [' Mu', 'rom', 'achi']                     [497, 498]
+    Taiheiki             [' Tai', 'he', 'iki']                      [506, 507]
+
+  EXCLUDED WORDS: {'single_token': 311}
+
+  (context text span: chars 19132-21205)
+====================================================================================================
+wt103-test-a2-t684  k=22  drop_frac=0.043
+context starts: ' the article reported that Syco Records was working on candidates that included Max Martin and Lundin . \n " Kiss You " was chosen as the second US single and th'
+
+  DROPPED WORDS (18):  word | pieces | dropped positions
+    Syco                 [' Sy', 'co']                              [4]
+    Lundin               [' Lund', 'in']                            [16]
+    uptempo              [' upt', 'empo']                           [215]
+    Motown               [' Mot', 'own']                            [262]
+    tinged               [' ting', 'ed']                            [267]
+    Instrumentation      [' Instrument', 'ation']                   [294]
+    Musicnotes           [' Music', 'notes']                        [340]
+    Collar               [' Coll', 'ar']                            [353]
+    Allmusic             [' All', 'music']                          [356]
+    frenetically         [' fren', 'etically']                      [364]
+    lyrical              [' lyr', 'ical']                           [370]
+    infatuation          [' inf', 'at', 'uation']                   [378, 379]
+    euphemisms           [' eup', 'hem', 'isms']                    [388, 389]
+    centred              [' cent', 'red']                           [443]
+    Dolan                [' Dol', 'an']                             [457]
+    Petridis             [' Pet', 'rid', 'is']                      [491, 492]
+    commended            [' comm', 'ended']                         [497]
+    dislodge             [' dis', 'l', 'odge']                      [508, 509]
+
+  EXCLUDED WORDS: {'single_token': 334}
+
+  (context text span: chars 2800-5005)
+====================================================================================================
+wt103-test-a2-t1838  k=29  drop_frac=0.057
+context starts: ' Kiss You " has received a gold certification from the Recording Industry Association of New Zealand ( RIANZ ) , indicating sales of 7 @,@ 500 copies . The trac'
+
+  DROPPED WORDS (25):  word | pieces | dropped positions
+    RIANZ                [' R', 'IAN', 'Z']                         [17, 18]
+    Flanders             [' F', 'landers']                          [49]
+    Wallonia             [' Wall', 'onia']                          [52]
+    IFPI                 [' IF', 'PI']                              [87]
+    signifying           [' sign', 'ifying']                        [94]
+    Arnell               [' Arn', 'ell']                            [126]
+    technicolor          [' techn', 'icolor']                       [188]
+    romp                 [' rom', 'p']                              [196]
+    Arnell               [' Arn', 'ell']                            [203]
+    characterised        [' character', 'ised']                     [225]
+    Zayn                 [' Z', 'ay', 'n']                          [246, 247]
+    Tomlinson            [' Tom', 'lin', 'son']                     [269, 270]
+    Arnell               [' Arn', 'ell']                            [303]
+    Premiering           [' Premier', 'ing']                        [306]
+    Vevo                 [' Ve', 'vo']                              [310]
+    surfers              [' surf', 'ers']                           [340]
+    skiers               [' sk', 'iers']                            [343]
+    jailers              [' jail', 'ers']                           [346]
+    Jailhouse            [' Jail', 'house']                         [365]
+    Blanket              [' Blank', 'et']                           [370]
+    Surfer               [' Sur', 'fer']                            [390]
+    Presley              [' Pres', 'ley']                           [396]
+    Rammstein            [' R', 'amm', 'stein']                     [405, 406]
+    Vevo                 [' Ve', 'vo']                              [447]
+    Vevo                 [' Ve', 'vo']                              [487]
+
+  EXCLUDED WORDS: {'single_token': 296}
+
+  (context text span: chars 7381-9497)

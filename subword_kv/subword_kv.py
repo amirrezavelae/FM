@@ -63,6 +63,30 @@ class WordIndex:
                 return False
         return self.offsets[t1][1] == we
 
+    def token_roles(self, lo, hi, known_words):
+        """Role of each token in [lo, hi) with respect to multi-token words.
+
+        "rep_first" / "rep_rest": first / later piece of a multi-token word whose
+        spelling is in `known_words` (the words Ours dropped in the context, so
+        the word re-appears after its prefix KV was removed).
+        "new_first" / "new_rest": same, for multi-token words not in `known_words`.
+        "other": everything else (single-token words, punctuation, spaces).
+        A word that starts before `lo` has its in-window pieces marked "_rest".
+        """
+        roles = ["other"] * (hi - lo)
+        c0, c1 = int(self.starts[lo]), int(self.ends[hi - 1])
+        i0 = int(np.searchsorted(self.word_ends, c0, side="right"))
+        i1 = int(np.searchsorted(self.word_starts, c1, side="left"))
+        for ws, we in self.spans[i0:i1]:
+            t0 = int(np.searchsorted(self.ends, ws, side="right"))
+            t1 = int(np.searchsorted(self.starts, we, side="left")) - 1
+            if t1 <= t0:
+                continue
+            kind = "rep" if self.text[ws:we] in known_words else "new"
+            for t in range(max(t0, lo), min(t1, hi - 1) + 1):
+                roles[t - lo] = f"{kind}_{'first' if t == t0 else 'rest'}"
+        return roles
+
     def analyze(self, lo, hi, protected):
         """Classify every word that overlaps the token window [lo, hi).
 
@@ -145,6 +169,30 @@ class DropHooks:
 # --------------------------------------------------------------------------- #
 # Statistics
 # --------------------------------------------------------------------------- #
+def cluster_ratio_ci(sums, counts, groups, n_boot=1000, seed=0, alpha=0.05):
+    """Ratio estimator sum(sums)/sum(counts) with a bootstrap over clusters.
+
+    sums, counts: per-unit arrays (a unit is a chunk). groups: per-unit cluster
+    label (the article). Clusters are resampled with replacement, so repeated
+    chunks from one article are not treated as independent. Per-unit means use
+    counts = 1. Returns (estimate, lo, hi); NaN when nothing is counted.
+    """
+    sums = np.asarray(sums, dtype=np.float64)
+    counts = np.asarray(counts, dtype=np.float64)
+    labels, gi = np.unique(np.asarray(groups), return_inverse=True)
+    gs = np.bincount(gi, weights=sums, minlength=len(labels))
+    gc = np.bincount(gi, weights=counts, minlength=len(labels))
+    if gc.sum() == 0:
+        return float("nan"), float("nan"), float("nan")
+    rng = np.random.default_rng(seed)
+    idx = rng.integers(0, len(labels), size=(n_boot, len(labels)))
+    den = gc[idx].sum(axis=1)
+    ok = den > 0
+    est = gs[idx].sum(axis=1)[ok] / den[ok]
+    lo, hi = np.percentile(est, [100 * alpha / 2, 100 * (1 - alpha / 2)])
+    return float(gs.sum() / gc.sum()), float(lo), float(hi)
+
+
 def bootstrap_ci(x, n_boot=1000, seed=0, alpha=0.05):
     """Mean and percentile bootstrap CI over examples. Returns (mean, lo, hi)."""
     x = np.asarray(x, dtype=np.float64)

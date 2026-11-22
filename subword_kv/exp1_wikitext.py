@@ -25,15 +25,21 @@ Metrics per chunk, averaged over the 64 positions: KL(Full || cond), top-1
 agreement with Full, change in log-loss of the real next token vs Full.
 
 Outputs in --out_dir:
-  exp1_examples.jsonl       one JSON line per chunk
+  exp1_examples.jsonl       one JSON line per chunk, incl. per-position KL / dNLL
+                            and the role of each target token ("per_position")
   exp1_summary.csv          one row per condition (mean + 95% bootstrap CI)
-  exp1_paired.csv           paired differences (Ours-Random, Ours-Full)
+  exp1_paired.csv           paired differences (Ours-Random, Ours-Full); CIs over
+                            chunks and over articles
+  exp1_slices.csv           metrics split by target-token role (rep_first, rep_rest,
+                            new_first, new_rest, other); article-clustered CIs
   exp1_dropped_words.csv    every dropped word, sorted by count
   exp1_excluded_words.csv   every excluded word with its reason, sorted by count
   exp1_meta.json            args, versions, hook-check result
 
 Modes:
   --words_only N     CPU only: print dropped/excluded words for N chunks, exit
+  --inspect ID ...   CPU only: raw text + the tokens where Ours hurt most
+  --inspect_worst N  same, for the N chunks with the largest Ours-Random KL gap
   --summarize_only   rebuild the summary files from an existing jsonl, exit
   --resume           continue a run, skipping chunks already in the jsonl
 """
@@ -53,7 +59,7 @@ import torch
 import torch.nn.functional as F
 from transformers import AutoModelForCausalLM, AutoTokenizer, DynamicCache
 
-from subword_kv import DropHooks, WordIndex, bootstrap_ci
+from subword_kv import DropHooks, WordIndex, bootstrap_ci, cluster_ratio_ci
 
 EXP = "wikitext"
 TITLE_RE = re.compile(r"^= [^=].* =$")  # level-1 article heading, after strip()
@@ -204,12 +210,23 @@ def compare(lp_full, lp_cond, targets):
     top1 = (lp_full.argmax(-1) == lp_cond.argmax(-1)).float()
     nll_c = -lp_cond.gather(1, targets[:, None])[:, 0]
     nll_f = -lp_full.gather(1, targets[:, None])[:, 0]
-    return {"kl": kl.mean().item(), "top1": top1.mean().item(),
-            "dloss": (nll_c - nll_f).mean().item(), "loss": nll_c.mean().item()}
+    metrics = {"kl": kl.mean().item(), "top1": top1.mean().item(),
+               "dloss": (nll_c - nll_f).mean().item(), "loss": nll_c.mean().item()}
+    # per continuation position (for the slice analysis)
+    pos = {"kl": kl.tolist(), "dnll": (nll_c - nll_f).tolist(), "top1": top1.tolist()}
+    return metrics, pos
 
 
 def mean_metrics(ms):
     return {k: float(np.mean([m[k] for m in ms])) for k in METRICS}
+
+
+def mean_pos(ps):
+    return {k: np.mean([p[k] for p in ps], axis=0).tolist() for k in ps[0]}
+
+
+def round_pos(p, nd=5):
+    return {k: [round(v, nd) for v in vals] for k, vals in p.items()}
 
 
 @torch.no_grad()
@@ -240,15 +257,29 @@ def run_chunk(model, art, chunk, dropped, excluded, ours, args):
         rand_sets[r] = sorted(rng.sample(pool, k_rand))
     rec["random_positions"] = {str(r): p for r, p in rand_sets.items()}
 
+    # Per-position record. role = how the target token relates to multi-token
+    # words; "rep_*" = a word Ours dropped in the context that re-appears here.
+    known = {w["word"] for w in dropped}
+    t_lo = lo + C + 1
+    pp = {"target_ids": art.ids[t_lo: t_lo + L],
+          "roles": art.token_roles(t_lo, t_lo + L, known),
+          "full_nll": [round(v, 5) for v in (-lp_full.gather(1, tgt[:, None])[:, 0]).tolist()]}
+
     for s in args.s_values:
         lp = F.log_softmax(continuation_logits(model, cache, cont_ids, ours, s), -1)
-        rec["metrics"][f"ours_s{s}"] = compare(lp_full, lp, tgt)
-        per_seed = []
+        m, p = compare(lp_full, lp, tgt)
+        rec["metrics"][f"ours_s{s}"] = m
+        pp[f"ours_s{s}"] = round_pos(p)
+        ms, ps = [], []
         for r in range(args.random_seeds):
             lp = F.log_softmax(continuation_logits(model, cache, cont_ids, rand_sets[r], s), -1)
-            per_seed.append(compare(lp_full, lp, tgt))
-        rec["metrics"][f"random_s{s}"] = mean_metrics(per_seed)
-        rec["metrics_by_seed"][f"random_s{s}"] = per_seed
+            m, p = compare(lp_full, lp, tgt)
+            ms.append(m)
+            ps.append(p)
+        rec["metrics"][f"random_s{s}"] = mean_metrics(ms)
+        rec["metrics_by_seed"][f"random_s{s}"] = ms
+        pp[f"random_s{s}"] = round_pos(mean_pos(ps))  # mean over seeds
+    rec["per_position"] = pp
     return rec
 
 
@@ -256,14 +287,120 @@ def run_chunk(model, art, chunk, dropped, excluded, ours, args):
 # Summaries (built from the jsonl, so they work after a resume too)
 # --------------------------------------------------------------------------- #
 def read_jsonl(path):
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         return [json.loads(line) for line in f if line.strip()]
+
+
+def article_of(rec):
+    """Article index from a chunk id like wt103-test-a18-t963."""
+    return int(re.search(r"-a(\d+)-t", rec["id"]).group(1))
+
+
+ROLES = ["rep_first", "rep_rest", "new_first", "new_rest", "other"]
+
+
+def slice_analysis(recs, args, out_dir):
+    """Per-position metrics split by the role of the target token.
+
+    rep_*  = pieces of a multi-token word that Ours dropped in the context and
+             that re-appears in the continuation (copying a word whose prefix
+             KV was removed). new_* = multi-token words not seen as drops.
+    CIs bootstrap over articles (chunks of one article are not independent).
+    """
+    pp = [r for r in recs if r["eligible"] and "per_position" in r]
+    if not pp:
+        print("\n[slices] no per-position data in this jsonl (run made before it was added)")
+        return
+    groups = [article_of(r) for r in pp]
+    rows = []
+    for s in args.s_values:
+        for role in ROLES + ["all"]:
+            masks = [np.array([role == "all" or x == role for x in r["per_position"]["roles"]])
+                     for r in pp]
+            counts = np.array([m.sum() for m in masks], dtype=float)
+            if counts.sum() == 0:
+                continue
+            for metric in ("kl", "dnll", "top1"):
+                tot = {c: np.array([np.array(r["per_position"][f"{c}_s{s}"][metric])[m].sum()
+                                    for r, m in zip(pp, masks)]) for c in ("ours", "random")}
+                for label, v in (("ours", tot["ours"]), ("random", tot["random"]),
+                                 ("ours_minus_random", tot["ours"] - tot["random"])):
+                    est, lo, hi = cluster_ratio_ci(v, counts, groups, args.bootstrap)
+                    rows.append({"s": s, "role": role, "metric": metric, "quantity": label,
+                                 "n_positions": int(counts.sum()),
+                                 "n_chunks": int((counts > 0).sum()),
+                                 "mean": est, "ci_lo": lo, "ci_hi": hi})
+    write_csv(os.path.join(out_dir, "exp1_slices.csv"), rows)
+
+    print("\nSlices by target-token role (article-clustered bootstrap CIs)")
+    print("  rep_* = pieces of a word Ours dropped that re-appears in the continuation")
+    for s in args.s_values:
+        print(f"\n  s={s}   {'role':<10s}{'n_pos':>7s}{'KL ours':>10s}{'KL rand':>10s}"
+              f"{'ours-rand KL [95% CI]':>34s}{'dNLL ours-rand':>18s}")
+        for role in ROLES + ["all"]:
+            g = {(r["metric"], r["quantity"]): r for r in rows if r["s"] == s and r["role"] == role}
+            if not g:
+                continue
+            kd, nd = g[("kl", "ours_minus_random")], g[("dnll", "ours_minus_random")]
+            print(f"       {role:<10s}{kd['n_positions']:>7d}"
+                  f"{g[('kl', 'ours')]['mean']:>10.4f}{g[('kl', 'random')]['mean']:>10.4f}"
+                  f"{kd['mean']:>+14.4f} [{kd['ci_lo']:+.4f},{kd['ci_hi']:+.4f}]"
+                  f"{nd['mean']:>+10.4f}")
+
+
+def inspect_chunks(articles, tok, args, recs, ids):
+    """CPU only: show one chunk's dropped words and where the loss rose."""
+    by_id = {r["id"]: r for r in recs}
+    s, C, L = args.inspect_s, args.ctx_len, args.cont_len
+    for cid in ids:
+        rec = by_id.get(cid)
+        if rec is None:
+            print(f"[inspect] {cid} not in the jsonl")
+            continue
+        ai, lo = map(int, re.search(r"-a(\d+)-t(\d+)", cid).groups())
+        art = articles[ai]
+        m = rec["metrics"]
+        print("=" * 100)
+        print(f"{cid}  k={rec['k']}  s={s}")
+        if f"ours_s{s}" in m:
+            print(f"  KL   ours={m[f'ours_s{s}']['kl']:.3f}  random={m[f'random_s{s}']['kl']:.3f}   "
+                  f"top1 ours={m[f'ours_s{s}']['top1']:.2f}  random={m[f'random_s{s}']['top1']:.2f}   "
+                  f"dloss ours={m[f'ours_s{s}']['dloss']:+.3f}  random={m[f'random_s{s}']['dloss']:+.3f}")
+        cnt = Counter((w["word"], "|".join(w["pieces"])) for w in rec["dropped_words"])
+        print("  dropped words (most frequent): "
+              + "; ".join(f"{w} [{p}] x{n}" for (w, p), n in cnt.most_common(10)))
+        c_end = int(art.ends[lo + C - 1])
+        print("\n  context ends : ..." + repr(art.text[int(art.starts[max(lo + C - 40, lo)]): c_end]))
+        t_lo = lo + C + 1
+        print("  continuation : " + repr(art.text[int(art.starts[t_lo]): int(art.ends[t_lo + L - 1])]))
+        pp = rec.get("per_position")
+        if not pp or f"ours_s{s}" not in pp:
+            print("\n  (no per-position data for this run; rerun with the current script)")
+            continue
+        d_o, d_r = pp[f"ours_s{s}"]["dnll"], pp[f"random_s{s}"]["dnll"]
+        kl_o = pp[f"ours_s{s}"]["kl"]
+        order = sorted(range(L), key=lambda j: -d_o[j])[:15]
+        print(f"\n  15 target tokens where Ours raised the loss most "
+              f"(dNLL = loss change vs Full, in nats):")
+        print(f"  {'j':>3s} {'role':<10s}{'full NLL':>9s}{'dNLL ours':>11s}{'dNLL rand':>11s}"
+              f"{'KL ours':>9s}  context -> [target]")
+        for j in order:
+            t = t_lo + j
+            left = tok.decode(art.ids[max(t - 6, lo + C): t]) if t - 1 >= lo + C else ""
+            print(f"  {j:>3d} {pp['roles'][j]:<10s}{pp['full_nll'][j]:>9.2f}{d_o[j]:>+11.2f}"
+                  f"{d_r[j]:>+11.2f}{kl_o[j]:>9.3f}  {left!r} -> [{tok.decode([art.ids[t]])!r}]")
+        by_role = {}
+        for j in range(L):
+            by_role.setdefault(pp["roles"][j], []).append(j)
+        print("\n  mean dNLL by role (ours / random):  " + "   ".join(
+            f"{r}: {np.mean([d_o[j] for j in js]):+.3f}/{np.mean([d_r[j] for j in js]):+.3f} (n={len(js)})"
+            for r, js in sorted(by_role.items())))
 
 
 def write_csv(path, rows):
     if not rows:
         return
-    with open(path, "w", newline="") as f:
+    with open(path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
         w.writeheader()
         w.writerows(rows)
@@ -307,11 +444,14 @@ def summarize(out_dir, args):
             ours = np.array([r["metrics"][f"ours_s{s}"][m] for r in elig])
             rand = np.array([r["metrics"][f"random_s{s}"][m] for r in elig])
             full = np.array([r["metrics"]["full"][m] for r in elig])
+            groups = [article_of(r) for r in elig]
             for label, diff in (("ours_minus_random", ours - rand),
                                 ("ours_minus_full", ours - full)):
                 mean, lo, hi = bootstrap_ci(diff, args.bootstrap)
+                _, alo, ahi = cluster_ratio_ci(diff, np.ones(len(diff)), groups, args.bootstrap)
                 paired.append({"s": s, "comparison": label, "metric": m, "n": len(diff),
-                               "mean_diff": mean, "ci_lo": lo, "ci_hi": hi})
+                               "mean_diff": mean, "ci_lo": lo, "ci_hi": hi,
+                               "ci_lo_article": alo, "ci_hi_article": ahi})
     write_csv(os.path.join(out_dir, "exp1_paired.csv"), paired)
 
     dropped = Counter()
@@ -342,7 +482,10 @@ def summarize(out_dir, args):
     for p in paired:
         if p["comparison"] == "ours_minus_random":
             print(f"  s={p['s']:<3d}{p['metric']:<6s}ours-random = {p['mean_diff']:+.4f} "
-                  f"[{p['ci_lo']:+.4f}, {p['ci_hi']:+.4f}]  n={p['n']}")
+                  f"[{p['ci_lo']:+.4f}, {p['ci_hi']:+.4f}] chunks  "
+                  f"[{p['ci_lo_article']:+.4f}, {p['ci_hi_article']:+.4f}] articles  n={p['n']}")
+
+    slice_analysis(recs, args, out_dir)
 
 
 # --------------------------------------------------------------------------- #
@@ -364,6 +507,11 @@ def main():
     ap.add_argument("--out_dir", default="results/exp1")
     ap.add_argument("--words_only", type=int, default=0, metavar="N",
                     help="CPU only: print the word log for N chunks and exit")
+    ap.add_argument("--inspect", nargs="*", default=None, metavar="CHUNK_ID",
+                    help="CPU only: show these chunks (ids from the jsonl) and exit")
+    ap.add_argument("--inspect_worst", type=int, default=0, metavar="N",
+                    help="CPU only: show the N chunks where Ours-Random KL is largest")
+    ap.add_argument("--inspect_s", type=int, default=0, help="s value used by --inspect")
     ap.add_argument("--summarize_only", action="store_true")
     ap.add_argument("--resume", action="store_true")
     ap.add_argument("--overwrite", action="store_true")
@@ -385,6 +533,17 @@ def main():
 
     if args.words_only:
         print_word_log(articles, chunks, args, args.words_only)
+        return
+
+    if args.inspect is not None or args.inspect_worst:
+        recs = read_jsonl(jsonl)
+        ids = list(args.inspect or [])
+        if args.inspect_worst:
+            s = args.inspect_s
+            el = [r for r in recs if r["eligible"]]
+            el.sort(key=lambda r: r["metrics"][f"random_s{s}"]["kl"] - r["metrics"][f"ours_s{s}"]["kl"])
+            ids += [r["id"] for r in el[: args.inspect_worst]]
+        inspect_chunks(articles, tok, args, recs, ids)
         return
 
     done = set()
@@ -420,7 +579,7 @@ def main():
 
     t0 = time.time()
     n_run = 0
-    with open(jsonl, "a") as out:
+    with open(jsonl, "a", encoding="utf-8") as out:
         for i, chunk in enumerate(chunks):
             if chunk["id"] in done:
                 continue

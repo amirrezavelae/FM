@@ -1,0 +1,36 @@
+{
+  "args": {
+    "model": "Qwen/Qwen2.5-7B",
+    "n_chunks": 200,
+    "ctx_len": 512,
+    "cont_len": 64,
+    "s_values": [
+      0,
+      16
+    ],
+    "random_seeds": 3,
+    "seed": 0,
+    "dtype": "float32",
+    "attn": "eager",
+    "hook_tol": 0.001,
+    "bootstrap": 1000,
+    "out_dir": "results/exp1_pp",
+    "words_only": 0,
+    "inspect": null,
+    "inspect_worst": 0,
+    "inspect_s": 0,
+    "summarize_only": false,
+    "resume": false,
+    "overwrite": false
+  },
+  "n_layers": 28,
+  "hook_check": {
+    "empty_drop_vs_default_maxdiff": 0.0,
+    "empty_drop_argmax_equal": true,
+    "big_drop_vs_default_maxdiff": 18.135862350463867,
+    "ok": true
+  },
+  "n_articles": 62,
+  "torch": "2.6.0+cu124",
+  "transformers": "5.23.0"
+}

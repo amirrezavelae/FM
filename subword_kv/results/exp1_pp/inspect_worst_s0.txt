@@ -1,0 +1,244 @@
+62 test articles, 200 chunks (512 ctx + 64 cont + 1 target tokens each)
+====================================================================================================
+wt103-test-a18-t963  k=28  s=0
+  KL   ours=0.367  random=0.006   top1 ours=0.77  random=0.98   dloss ours=+0.416  random=+0.001
+  dropped words (most frequent): Velázquez [ Vel|áz|quez] x2; pharynx [ ph|ary|nx] x1; busts [ bust|s] x1; recognisable [ recogn|isable] x1; characterised [ character|ised] x1; coalesce [ co|alesce] x1; physiologically [ phys|i|ologically] x1; vestments [ vest|ments] x1; Soho [ So|ho] x1; hangovers [ hang|overs] x1
+
+  context ends : ...' be the only one , and our person is suddenly adrift , fragmented , and subject to strange mutation . " Russell observed that while the depiction of figures in rooms is common through all eras of painting'
+  continuation : " the figures are always posed , and usually seemingly aware that they are being portrayed . This conceit is abandoned in Bacon 's series . \n Head I , completed late in 1948 , is considered more successful than Head II . Although it is well @-@ regarded critically , Head II is seen as something"
+
+  15 target tokens where Ours raised the loss most (dNLL = loss change vs Full, in nats):
+    j role       full NLL  dNLL ours  dNLL rand  KL ours  context -> [target]
+   55 other          5.79      +4.31      -0.10    2.090  ' it is well @-@' -> [' regarded']
+   56 other          8.12      +4.25      -0.04    0.495  ' is well @-@ regarded' -> [' critically']
+   17 new_first      8.69      +2.71      -0.10    0.608  ' they are being portrayed . This' -> [' conce']
+   31 other          3.63      +2.35      -0.01    0.723  ' series . \n Head I ,' -> [' completed']
+   59 other          0.27      +2.34      +0.02    1.479  '-@ regarded critically , Head' -> [' II']
+   26 other          1.94      +2.14      +0.00    0.479  " abandoned in Bacon 's series" -> [' .']
+    5 other          1.44      +1.83      +0.03    0.928  ' , the figures are always posed' -> [' ,']
+   25 other          1.81      +1.77      +0.11    0.580  " is abandoned in Bacon 's" -> [' series']
+   18 new_rest       0.07      +1.67      -0.00    1.480  ' are being portrayed . This conce' -> ['it']
+   42 other          7.26      +1.53      -0.06    0.250  '948 , is considered' -> [' more']
+   32 other          6.14      +1.47      +0.07    0.120  ' . \n Head I , completed' -> [' late']
+    8 other          8.72      +1.45      +0.02    0.283  ' are always posed , and usually' -> [' seemingly']
+   63 other          4.64      +1.11      -0.02    0.699  ' , Head II is seen as' -> [' something']
+   58 other          1.25      +1.09      -0.02    0.255  ' @-@ regarded critically ,' -> [' Head']
+   48 other          4.34      +0.95      -0.01    0.496  ' more successful than Head II .' -> [' Although']
+
+  mean dNLL by role (ours / random):  new_first: +2.713/-0.101 (n=1)   new_rest: +1.671/-0.002 (n=1)   other: +0.358/+0.002 (n=62)
+====================================================================================================
+wt103-test-a18-t963  k=28  s=0
+  KL   ours=0.367  random=0.006   top1 ours=0.77  random=0.98   dloss ours=+0.416  random=+0.001
+  dropped words (most frequent): Velázquez [ Vel|áz|quez] x2; pharynx [ ph|ary|nx] x1; busts [ bust|s] x1; recognisable [ recogn|isable] x1; characterised [ character|ised] x1; coalesce [ co|alesce] x1; physiologically [ phys|i|ologically] x1; vestments [ vest|ments] x1; Soho [ So|ho] x1; hangovers [ hang|overs] x1
+
+  context ends : ...' be the only one , and our person is suddenly adrift , fragmented , and subject to strange mutation . " Russell observed that while the depiction of figures in rooms is common through all eras of painting'
+  continuation : " the figures are always posed , and usually seemingly aware that they are being portrayed . This conceit is abandoned in Bacon 's series . \n Head I , completed late in 1948 , is considered more successful than Head II . Although it is well @-@ regarded critically , Head II is seen as something"
+
+  15 target tokens where Ours raised the loss most (dNLL = loss change vs Full, in nats):
+    j role       full NLL  dNLL ours  dNLL rand  KL ours  context -> [target]
+   55 other          5.79      +4.31      -0.10    2.090  ' it is well @-@' -> [' regarded']
+   56 other          8.12      +4.25      -0.04    0.495  ' is well @-@ regarded' -> [' critically']
+   17 new_first      8.69      +2.71      -0.10    0.608  ' they are being portrayed . This' -> [' conce']
+   31 other          3.63      +2.35      -0.01    0.723  ' series . \n Head I ,' -> [' completed']
+   59 other          0.27      +2.34      +0.02    1.479  '-@ regarded critically , Head' -> [' II']
+   26 other          1.94      +2.14      +0.00    0.479  " abandoned in Bacon 's series" -> [' .']
+    5 other          1.44      +1.83      +0.03    0.928  ' , the figures are always posed' -> [' ,']
+   25 other          1.81      +1.77      +0.11    0.580  " is abandoned in Bacon 's" -> [' series']
+   18 new_rest       0.07      +1.67      -0.00    1.480  ' are being portrayed . This conce' -> ['it']
+   42 other          7.26      +1.53      -0.06    0.250  '948 , is considered' -> [' more']
+   32 other          6.14      +1.47      +0.07    0.120  ' . \n Head I , completed' -> [' late']
+    8 other          8.72      +1.45      +0.02    0.283  ' are always posed , and usually' -> [' seemingly']
+   63 other          4.64      +1.11      -0.02    0.699  ' , Head II is seen as' -> [' something']
+   58 other          1.25      +1.09      -0.02    0.255  ' @-@ regarded critically ,' -> [' Head']
+   48 other          4.34      +0.95      -0.01    0.496  ' more successful than Head II .' -> [' Although']
+
+  mean dNLL by role (ours / random):  new_first: +2.713/-0.101 (n=1)   new_rest: +1.671/-0.002 (n=1)   other: +0.358/+0.002 (n=62)
+====================================================================================================
+wt103-test-a0-t793  k=58  s=0
+  KL   ours=0.277  random=0.025   top1 ours=0.94  random=0.94   dloss ours=+0.251  random=+0.037
+  dropped words (most frequent): Boulter [ B|oul|ter] x10; Whishaw [ Wh|ish|aw] x2; Chatroom [ Chat|room] x2; Donkey [ Don|key] x2; unrecognisable [ un|recogn|isable] x1; Nunn [ N|unn] x1; Hamlet [ Ham|let] x1; Zaza [ Z|aza] x1; Ayres [ Ay|res] x1; tenderness [ tend|erness] x1
+
+  context ends : ...' physician on television : " Playing a doctor is a strange experience . Pretending you know what you \'re talking about when you don \'t is very bizarre but there are advisers on set who are fantastic'
+  continuation : ' taking you through procedures and giving you the confidence to stand there and look like you know what you \'re doing . " Boulter starred in the 2011 film Mercenaries directed by Paris Leonti . \n = = Filmography = = \n = = = Film = = = \n = = ='
+
+  15 target tokens where Ours raised the loss most (dNLL = loss change vs Full, in nats):
+    j role       full NLL  dNLL ours  dNLL rand  KL ours  context -> [target]
+   42 rep_rest       0.06      +9.25      -0.01    9.054  ' Mercenaries directed by Paris Le' -> ['ont']
+   25 rep_rest       0.00      +5.90      -0.00    5.893  ' \'re doing . " B' -> ['oul']
+   24 rep_first      2.32      +2.19      +0.02    0.144  ' you \'re doing . "' -> [' B']
+   41 rep_first      0.01      +1.37      +0.00    1.341  ' film Mercenaries directed by Paris' -> [' Le']
+   48 new_first      9.81      +0.54      -1.50    0.001  'onti . \n = =' -> [' Film']
+   27 other          2.79      +0.14      +0.19    0.045  ' doing . " Boulter' -> [' starred']
+   36 new_first     10.59      +0.12      +0.08    0.031  ' 2011 film' -> [' Merc']
+   40 other          5.09      +0.11      +0.23    0.012  '1 film Mercenaries directed by' -> [' Paris']
+   37 new_rest       3.07      +0.06      -0.01    0.005  '2011 film Merc' -> ['enaries']
+   28 other          0.67      +0.03      +0.07    0.001  ' . " Boulter starred' -> [' in']
+   10 other          6.21      +0.03      +0.01    0.000  ' and giving you the confidence to' -> [' stand']
+    1 other          0.82      +0.03      +0.02    0.001  ' at taking' -> [' you']
+   56 other          2.94      +0.02      +0.33    0.008  ' = = \n = = =' -> [' Film']
+   26 rep_rest       0.00      +0.02      +0.00    0.015  're doing . " Boul' -> ['ter']
+   43 rep_rest       0.04      +0.02      +0.21    0.011  'enaries directed by Paris Leont' -> ['i']
+
+  mean dNLL by role (ours / random):  new_first: +0.332/-0.712 (n=2)   new_rest: +0.020/+0.099 (n=2)   other: -0.062/+0.063 (n=54)   rep_first: +1.782/+0.012 (n=2)   rep_rest: +3.795/+0.050 (n=4)
+====================================================================================================
+wt103-test-a23-t2003  k=56  s=0
+  KL   ours=0.194  random=0.008   top1 ours=0.94  random=0.99   dloss ours=+0.170  random=-0.008
+  dropped words (most frequent): JMA [ J|MA] x6; JTWC [ JT|WC] x5; Yanyan [ Y|any|an] x5; cyclone [ cycl|one] x4; Kujira [ K|uj|ira] x3; subtropical [ subt|ropical] x2; convection [ con|vection] x2; inconclusive [ incon|clusive] x1; classifying [ class|ifying] x1; waned [ w|aned] x1
+
+  context ends : ...' = \n Kujira developed from a broad area of disturbed weather as a tropical depression on April 9 well removed from any landmasses . Shortly after development , Kujira quickly intensified in its'
+  continuation : ' stages , and was upgraded to a tropical storm just two days after cyclogenesis . Strengthening slowed afterwards , though the storm attained typhoon intensity on April 14 . Intensification continued and late on April 15 , Kujira reached its peak intensity with winds of 165 km /'
+
+  15 target tokens where Ours raised the loss most (dNLL = loss change vs Full, in nats):
+    j role       full NLL  dNLL ours  dNLL rand  KL ours  context -> [target]
+   48 rep_first      0.49      +6.86      -0.03    4.027  ' on April 15 ,' -> [' K']
+   49 rep_rest       0.00      +3.55      -0.00    3.542  ' April 15 , K' -> ['uj']
+    9 other          4.87      +0.27      -0.17    0.004  ' was upgraded to a tropical storm' -> [' just']
+   17 new_first      6.65      +0.24      +0.06    0.276  ' days after cyclogenesis .' -> [' Stre']
+   20 other          3.52      +0.18      -0.27    0.005  'logenesis . Strengthening' -> [' slowed']
+   12 other          1.05      +0.16      -0.10    0.007  ' a tropical storm just two days' -> [' after']
+   26 other          5.09      +0.12      +0.07    0.004  ' slowed afterwards , though the storm' -> [' attained']
+    6 other          0.45      +0.10      -0.08    0.010  ' stages , and was upgraded to' -> [' a']
+   34 other          1.53      +0.09      -0.04    0.004  'phoon intensity on April 1' -> ['4']
+   13 new_first      9.09      +0.09      +0.00    0.005  ' tropical storm just two days after' -> [' cyc']
+   51 other          1.36      +0.08      -0.03    0.040  '15 , Kujira' -> [' reached']
+   52 other          0.44      +0.06      -0.00    0.009  '5 , Kujira reached' -> [' its']
+   36 new_first      4.44      +0.05      -0.03    0.560  ' on April 14 .' -> [' Int']
+   27 new_first      1.94      +0.05      -0.10    0.003  ' afterwards , though the storm attained' -> [' ty']
+   60 other          2.17      +0.05      -0.00    0.004  ' intensity with winds of 1' -> ['6']
+
+  mean dNLL by role (ours / random):  new_first: +0.105/-0.018 (n=4)   new_rest: +0.001/-0.004 (n=7)   other: +0.000/-0.008 (n=50)   rep_first: +6.858/-0.026 (n=1)   rep_rest: +1.776/-0.000 (n=2)
+====================================================================================================
+wt103-test-a53-t126  k=62  s=0
+  KL   ours=0.196  random=0.028   top1 ours=0.83  random=0.92   dloss ours=+0.146  random=+0.048
+  dropped words (most frequent): Krosa [ K|ros|a] x9; Luzon [ Luz|on] x3; JMA [ J|MA] x3; PAGASA [ P|AG|ASA] x3; JTWC [ JT|WC] x3; Typhoon [ Ty|phoon] x2; Meteorological [ Meteor|ological] x2; outflow [ out|flow] x2; advisories [ advis|ories] x2; typhoon [ ty|phoon] x2
+
+  context ends : ...' the time Krosa emerged into the South China Sea late on October 31 . The next day , PAGASA discontinued advisories after the typhoon exited the region . Convection rebuilt around'
+  continuation : ' center , with continued favorable conditions allowing for restrengthening . \n Late on November 1 , a large eye redeveloped , and the JTWC estimated Krosa attained peak 1 minute sustained winds of 185 km / h ( 115 mph ) . Early the next day , the'
+
+  15 target tokens where Ours raised the loss most (dNLL = loss change vs Full, in nats):
+    j role       full NLL  dNLL ours  dNLL rand  KL ours  context -> [target]
+   32 rep_first      1.16      +5.49      -0.06    1.476  ' , and the JTWC estimated' -> [' K']
+   33 rep_rest       0.00      +5.22      +0.00    5.220  ' and the JTWC estimated K' -> ['ros']
+   29 rep_first      0.94      +0.69      +0.38    0.241  ' redeveloped , and the' -> [' JT']
+   45 other          2.71      +0.48      +0.11    0.062  ' minute sustained winds of 1' -> ['8']
+   31 other          4.19      +0.23      +0.03    0.009  'ed , and the JTWC' -> [' estimated']
+   59 other          1.79      +0.09      +0.06    0.001  '15 mph ) . Early' -> [' the']
+    8 new_first      5.81      +0.08      +0.70    0.324  ' with continued favorable conditions allowing for' -> [' rest']
+   44 other          0.12      +0.07      -0.00    0.036  '1 minute sustained winds of ' -> ['1']
+   18 other          0.51      +0.06      -0.04    0.003  ' . \n Late on November ' -> ['1']
+   38 other          0.10      +0.05      +0.00    0.010  ' Krosa attained peak ' -> ['1']
+   46 other          0.38      +0.04      +0.02    0.002  ' sustained winds of 18' -> ['5']
+   23 new_first      3.18      +0.04      +0.03    0.002  ' 1 , a large eye' -> [' re']
+   34 rep_rest       0.00      +0.01      -0.00    0.013  ' the JTWC estimated Kros' -> ['a']
+    3 other          8.70      +0.01      -0.43    0.415  ' the center , with' -> [' continued']
+   36 other          1.55      +0.01      -0.02    0.041  'WC estimated Krosa attained' -> [' peak']
+
+  mean dNLL by role (ours / random):  new_first: +0.058/+0.368 (n=2)   new_rest: -0.004/+0.002 (n=5)   other: -0.042/+0.038 (n=52)   rep_first: +3.091/+0.158 (n=2)   rep_rest: +1.746/+0.001 (n=3)
+====================================================================================================
+wt103-test-a57-t20  k=59  s=0
+  KL   ours=0.163  random=0.006   top1 ours=0.92  random=0.96   dloss ours=+0.017  random=+0.017
+  dropped words (most frequent): Tatwine [ Tat|wine] x4; riddles [ r|iddles] x4; archbishop [ arch|bishop] x2; abbot [ ab|bot] x2; Benedictine [ Benedict|ine] x1; ecclesiastical [ ecc|lesi|ast|ical] x1; Mercian [ Merc|ian] x1; epigraph [ ep|igraph] x1; Breedon [ Breed|on] x1; Leicestershire [ Le|ic|esters|hire] x1
+
+  context ends : ..." of Donatus 's Ars Minor with the addition of information drawn from other grammarians . It was not designed for a newcomer to the Latin language , but is designed for more advanced students . It covers"
+  continuation : ' eight parts of speech through illustrations drawn from classical scholars , although not directly but through other grammatical works . There are also some examples drawn from the Psalms . The work was completed before he became archbishop , and was used not only in England but also on the continent . A recent edition of his works is T'
+
+  15 target tokens where Ours raised the loss most (dNLL = loss change vs Full, in nats):
+    j role       full NLL  dNLL ours  dNLL rand  KL ours  context -> [target]
+   17 new_first      1.36      +0.66      +0.02    0.063  ' although not directly but through other' -> [' gramm']
+   63 rep_first      5.57      +0.65      -0.00    0.431  ' recent edition of his works is' -> [' T']
+   40 rep_first      0.24      +0.41      +0.04    0.169  ' work was completed before he became' -> [' arch']
+   49 other          1.29      +0.28      +0.08    0.126  ' and was used not only in' -> [' England']
+    5 other          6.52      +0.19      +0.12    0.016  ' the eight parts of speech through' -> [' illustrations']
+   14 other          8.00      +0.19      +0.00    0.001  ' classical scholars , although not directly' -> [' but']
+   26 other          2.62      +0.18      +0.08    0.005  ' . There are also some examples' -> [' drawn']
+    0 other          3.51      +0.17      +0.06    0.022  ' the' -> [' eight']
+   34 other          2.75      +0.11      +0.01    0.117  ' the Psalms . The' -> [' work']
+   11 other          5.32      +0.07      +0.01    0.004  ' illustrations drawn from classical scholars ,' -> [' although']
+   38 other          3.79      +0.07      -0.05    0.646  ' . The work was completed before' -> [' he']
+   19 other          1.27      +0.06      -0.01    0.004  ' directly but through other grammatical' -> [' works']
+   58 other          2.62      +0.05      -0.02    0.001  ' on the continent . A recent' -> [' edition']
+   45 other          4.06      +0.04      -0.09    0.003  ' became archbishop , and was' -> [' used']
+   61 other          1.33      +0.03      +0.07    0.046  ' . A recent edition of his' -> [' works']
+
+  mean dNLL by role (ours / random):  new_first: +0.327/+0.068 (n=2)   new_rest: -0.063/-0.004 (n=3)   other: -0.008/+0.017 (n=56)   rep_first: +0.530/+0.017 (n=2)   rep_rest: -0.001/+0.000 (n=1)
+====================================================================================================
+wt103-test-a40-t740  k=77  s=0
+  KL   ours=0.150  random=0.011   top1 ours=0.91  random=0.95   dloss ours=-0.071  random=+0.016
+  dropped words (most frequent): Tondo [ T|ondo] x3; bombardment [ bombard|ment] x1; prewar [ pre|war] x1; walled [ w|alled] x1; Intramuros [ Intr|am|uros] x1; Angono [ Ang|ono] x1; Petroglyphs [ Petro|glyph|s] x1; negritos [ neg|ritos] x1; Australoid [ Austral|oid] x1; aboriginal [ ab|original] x1
+
+  context ends : ...' the Bruneian Empire invaded , wanting to take advantage of Tondo \'s China trade by attacking its environs and establishing " كوتا سلودوڠ Kota Saludong "'
+  continuation : ' The Kingdom of Maynila ) . They ruled under and gave yearly tribute to the Sultanate of Brunei as its satellite state . They established a new dynasty under the local leader who accepted Islam and became Rajah Salalila or Tariq Sulayman I. He also established a trading challenge to the already'
+
+  15 target tokens where Ours raised the loss most (dNLL = loss change vs Full, in nats):
+    j role       full NLL  dNLL ours  dNLL rand  KL ours  context -> [target]
+    0 other          5.62      +0.42      -0.03    0.877  ' (' -> [' The']
+   17 new_first      1.24      +0.41      +0.01    0.063  ' and gave yearly tribute to the' -> [' Sultan']
+   43 new_first      0.90      +0.32      -0.03    0.062  ' accepted Islam and became Rajah' -> [' Sal']
+   31 other          5.55      +0.22      -0.15    0.007  ' state . They established a new' -> [' dynasty']
+   48 new_rest       7.19      +0.20      -0.05    0.060  'ah Salalila or T' -> ['ari']
+   41 new_first      2.18      +0.19      -0.04    0.007  ' leader who accepted Islam and became' -> [' Raj']
+   38 other          2.04      +0.17      -0.01    0.013  ' under the local leader who accepted' -> [' Islam']
+   51 new_rest       3.24      +0.15      +0.23    0.001  'ila or Tariq Sul' -> ['ay']
+   18 new_rest       1.43      +0.15      +0.03    0.006  ' gave yearly tribute to the Sultan' -> ['ate']
+   46 other          3.18      +0.14      +0.03    0.003  ' became Rajah Salalila' -> [' or']
+   10 other          5.11      +0.12      +0.01    0.020  'nila ) . They ruled' -> [' under']
+   36 other          5.58      +0.12      -0.20    0.018  ' new dynasty under the local leader' -> [' who']
+   13 other          9.35      +0.10      +0.11    0.010  ' . They ruled under and gave' -> [' yearly']
+    7 other          1.06      +0.10      -0.02    0.008  ' Kingdom of Maynila )' -> [' .']
+   30 other          3.04      +0.08      -0.02    0.008  ' satellite state . They established a' -> [' new']
+
+  mean dNLL by role (ours / random):  new_first: -0.593/+0.017 (n=7)   new_rest: -0.079/+0.068 (n=11)   other: +0.010/+0.004 (n=46)
+====================================================================================================
+wt103-test-a4-t709  k=33  s=0
+  KL   ours=0.142  random=0.010   top1 ours=0.95  random=0.98   dloss ours=+0.109  random=+0.007
+  dropped words (most frequent): Rifenburg [ Rif|enburg] x11; Wolverines [ Wolver|ines] x3; Rifenberg [ R|ifen|berg] x2; excelling [ exc|elling] x1; MHSAA [ M|HS|AA] x1; syndicate [ synd|icate] x1; limbed [ lim|bed] x1; Saginaw [ Sag|in|aw] x1; boomed [ bo|omed] x1; loudest [ lou|dest] x1
+
+  context ends : ...' . Wisconsin \'s offense protested to officials , who " prowled the Wolverines secondary but never caught their man . " Rifenburg continued to scramble Badger signals , as Rifenburg \'s teammates laughed'
+  continuation : ' his scheme . In the January 1 , 1948 Rose Bowl that season , Michigan rolled to a 49 – 0 victory over USC , and they outgained the Trojans 491 yards to 133 . Rifenburg caught a 29 @-@ yard'
+
+  15 target tokens where Ours raised the loss most (dNLL = loss change vs Full, in nats):
+    j role       full NLL  dNLL ours  dNLL rand  KL ours  context -> [target]
+   53 rep_first      1.30      +7.34      -0.07    2.203  ' to 133 .' -> [' Rif']
+   54 rep_rest       0.00      +0.46      +0.00    0.457  ' 133 . Rif' -> ['enburg']
+    1 other          7.28      +0.16      -0.09    0.010  ' at his' -> [' scheme']
+   16 other          7.25      +0.12      +0.09    0.007  '1948 Rose Bowl' -> [' that']
+   36 new_rest       2.85      +0.10      -0.04    0.000  ' over USC , and they out' -> ['g']
+    3 other          2.82      +0.08      +0.07    0.428  ' at his scheme .' -> [' In']
+   20 other          7.72      +0.07      -0.02    0.002  ' Rose Bowl that season , Michigan' -> [' rolled']
+   14 other          0.81      +0.07      -0.05    0.004  ' , 1948' -> [' Rose']
+   17 other          4.26      +0.07      +0.03    0.022  '948 Rose Bowl that' -> [' season']
+   33 other          2.05      +0.07      -0.03    0.065  ' 0 victory over USC ,' -> [' and']
+   25 other          1.13      +0.06      +0.02    0.001  ' Michigan rolled to a 4' -> ['9']
+   38 other          0.64      +0.05      -0.01    0.003  ' , and they outgained' -> [' the']
+   39 new_first      0.11      +0.04      +0.00    0.006  ' and they outgained the' -> [' Tro']
+   57 other          0.88      +0.03      +0.01    0.004  '3 . Rifenburg caught a' -> [' ']
+   60 other          0.16      +0.03      -0.02    0.003  'enburg caught a 29' -> [' @']
+
+  mean dNLL by role (ours / random):  new_first: -0.014/-0.037 (n=2)   new_rest: +0.024/-0.009 (n=4)   other: -0.016/+0.012 (n=56)   rep_first: +7.337/-0.069 (n=1)   rep_rest: +0.457/+0.000 (n=1)
+====================================================================================================
+wt103-test-a17-t612  k=32  s=0
+  KL   ours=0.117  random=0.006   top1 ours=0.95  random=0.97   dloss ours=+0.132  random=+0.013
+  dropped words (most frequent): Petrick [ Pet|rick] x6; dreamings [ dream|ings] x2; Utopia [ U|top|ia] x1; Kintore [ K|int|ore] x1; Yuendumu [ Yu|endum|u] x1; Balgo [ Bal|go] x1; outstations [ out|stations] x1; Josepha [ Jose|pha] x1; Papunya [ Pap|unya] x1; Sturt [ St|urt] x1
+
+  context ends : ...' spiritual sustenance , reminding [ the local Indigenous people ] of the sacredness of [ their ] country " . These paintings are undertaken with red , blue and orange dots that represent the fruit at different stages'
+  continuation : ' its development . She also paints women ’ s ceremonies ( Awelye ) and dreamings , and these are created using rows of coloured dots and include representations of women \'s ceremonial iconography . \n Journalist Zelda Cawthorne described Petrick as one of the " finest contemporary Aboriginal artists " . Art consultant Adrian'
+
+  15 target tokens where Ours raised the loss most (dNLL = loss change vs Full, in nats):
+    j role       full NLL  dNLL ours  dNLL rand  KL ours  context -> [target]
+   48 rep_first      0.56      +8.45      -0.03    4.632  ' Zelda Cawthorne described' -> [' Pet']
+   61 other          3.02      +0.36      +0.01    0.025  ' finest contemporary Aboriginal artists " .' -> [' Art']
+    9 other          2.68      +0.19      +0.03    0.016  ' She also paints women ’ s' -> [' ceremonies']
+   55 other          5.32      +0.19      +0.06    0.008  'rick as one of the "' -> [' finest']
+   49 rep_rest       0.02      +0.17      -0.00    0.163  ' Cawthorne described Pet' -> ['rick']
+   47 other          1.89      +0.17      +0.04    0.004  'ist Zelda Cawthorne' -> [' described']
+   56 other          2.80      +0.16      -0.00    0.010  ' as one of the " finest' -> [' contemporary']
+   35 other          4.05      +0.12      +0.08    0.001  " include representations of women 's" -> [' ceremonial']
+    3 other          5.67      +0.12      +0.02    0.314  ' in its development .' -> [' She']
+   43 new_first      6.52      +0.11      +0.05    0.003  'ography . \n Journalist Zelda' -> [' C']
+   54 other          0.85      +0.09      -0.05    0.009  ' Petrick as one of the' -> [' "']
+   24 other          6.20      +0.09      -0.09    0.002  ' , and these are created using' -> [' rows']
+    7 other          5.00      +0.08      -0.07    0.001  ' development . She also paints women' -> [' ’']
+   50 other          1.29      +0.07      -0.04    0.017  'awthorne described Petrick' -> [' as']
+   17 rep_rest       0.01      +0.04      +0.00    0.030  ' Awelye ) and dream' -> ['ings']
+
+  mean dNLL by role (ours / random):  new_first: -0.078/+0.061 (n=4)   new_rest: -0.006/+0.019 (n=7)   other: +0.014/+0.008 (n=49)   rep_first: +3.934/+0.011 (n=2)   rep_rest: +0.104/+0.000 (n=2)

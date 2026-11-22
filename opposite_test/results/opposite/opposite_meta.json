@@ -1,0 +1,101 @@
+{
+  "args": {
+    "model": "Qwen/Qwen2.5-7B",
+    "n_chunks": 100,
+    "ctx_len": 512,
+    "cont_len": 64,
+    "windows": [
+      "0:4",
+      "0:8",
+      "0:12",
+      "0:16",
+      "0:20",
+      "0:24",
+      "4:8",
+      "8:12",
+      "12:16",
+      "16:20",
+      "20:24",
+      "24:28"
+    ],
+    "random_seeds": 1,
+    "seed": 0,
+    "dtype": "float32",
+    "attn": "eager",
+    "hook_tol": 0.001,
+    "bootstrap": 1000,
+    "out_dir": "results/opposite",
+    "compare_sweep": "../subword_kv/results/exp1_sweep",
+    "summarize_only": false,
+    "resume": false,
+    "overwrite": false,
+    "n_layers": 28
+  },
+  "n_layers": 28,
+  "windows": [
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      0,
+      12
+    ],
+    [
+      0,
+      16
+    ],
+    [
+      0,
+      20
+    ],
+    [
+      0,
+      24
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      8,
+      12
+    ],
+    [
+      12,
+      16
+    ],
+    [
+      16,
+      20
+    ],
+    [
+      20,
+      24
+    ],
+    [
+      24,
+      28
+    ]
+  ],
+  "hook_check": {
+    "empty_drop_vs_default_maxdiff": 0.0,
+    "empty_drop_argmax_equal": true,
+    "big_drop_vs_default_maxdiff": 18.051738739013672,
+    "ok": true
+  },
+  "window_check": {
+    "A_window_full_vs_old_s0": 0.0,
+    "B_window_last_vs_old_s_last": 0.0,
+    "C_layer0_only_vs_plain": 3.366652250289917,
+    "D_lower_half_vs_plain": 17.066482543945312,
+    "D_upper_half_vs_plain": 13.501640319824219,
+    "ok": true
+  },
+  "torch": "2.6.0+cu124",
+  "transformers": "5.23.0"
+}

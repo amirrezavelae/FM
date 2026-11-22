@@ -298,31 +298,56 @@ def make_token_tests(tok):
     return is_quote, is_stop
 
 
+def after_quote_ids(tok, q_id, needle, fallback):
+    """Token ids of the needle as it is tokenized right after the quote token q_id.
+    In the prompt the needle follows a space (' vert','ebra','e'); after a quote
+    there is no space, so the model's first piece is 'vert', not ' vert'. Scoring
+    the spaced ids there was the bug that kept Full at 3%."""
+    q = tok.decode([q_id])
+    ids = tok(q + needle, add_special_tokens=False)["input_ids"]
+    if ids and ids[0] == q_id and tok.decode(ids[1:]) == needle:
+        return ids[1:]
+    ids = tok(needle, add_special_tokens=False)["input_ids"]
+    return ids if tok.decode(ids) == needle else fallback
+
+
 @torch.no_grad()
-def eval_condition(model, tok, cache, tail, target, tests, positions, a, b, generate, max_new, needle):
+def eval_condition(model, tok, cache, tail, target, tests, positions, a, b, generate, max_new, needle,
+                   fmt="auto"):
     """Teacher-forced exact match + NLL of the needle; optional greedy text.
 
-    The base model usually opens its answer with a quote mark. If the argmax at
-    the first answer position is a quote, the quote is fed and the needle is scored
-    after it (the quote's own probability is not counted), so a formatting habit is
-    not mistaken for a retrieval failure. exact = every needle token is the argmax
-    AND the next argmax ends the answer ('.', newline or a closing quote)."""
+    The base model usually opens its answer with a quote mark, and then spells the
+    needle WITHOUT a leading space (a different tokenization from the prompt's).
+    So: if the argmax at the first answer position is a quote, the quote is fed and
+    the needle is scored after it in its no-space tokenization (the quote's own
+    probability is not counted). `fmt` fixes the format: "auto" decides from this
+    run (used for Full); Full's choice (res["fmt"]: a quote id or None) is then
+    passed to every other condition, so NLLs are comparable across conditions.
+    exact = every needle token is the argmax AND the next argmax ends the answer
+    ('.', newline or a closing quote)."""
     is_quote, is_stop = tests
     hooks = DropHooks(model, positions, a, b) if positions else None
     try:
-        T = len(target)
-        lp = F.log_softmax(fwd(model, tail + target, copy.deepcopy(cache), T + 1), -1)
-        a0 = int(lp[0].argmax())
-        quoted = a0 != target[0] and is_quote(a0)
+        if fmt == "auto":
+            T = len(target)
+            lp = F.log_softmax(fwd(model, tail + target, copy.deepcopy(cache), T + 1), -1)
+            a0 = int(lp[0].argmax())
+            fmt = a0 if (a0 != target[0] and is_quote(a0)) else None
+        quoted = fmt is not None
         if quoted:
-            lp = F.log_softmax(fwd(model, tail + [a0] + target, copy.deepcopy(cache), T + 1), -1)
+            target = after_quote_ids(tok, fmt, needle, target)
+            T = len(target)
+            lp = F.log_softmax(fwd(model, tail + [fmt] + target, copy.deepcopy(cache), T + 1), -1)
+        else:
+            T = len(target)
+            lp = F.log_softmax(fwd(model, tail + target, copy.deepcopy(cache), T + 1), -1)
         tgt = torch.tensor(target, device=lp.device)
         ok = lp[:-1].argmax(-1) == tgt
         nll = -lp[:-1].gather(1, tgt[:, None])[:, 0]
         stop_ok = is_stop(int(lp[-1].argmax()))
         res = {"exact": float(bool(ok.all()) and stop_ok), "nll": float(nll.sum()),
                "first_ok": float(ok[0]), "frac_tok_ok": float(ok.float().mean()),
-               "quoted": float(quoted)}
+               "quoted": float(quoted), "fmt": fmt}
         if generate:
             c2 = copy.deepcopy(cache)
             lg = fwd(model, tail, c2, 1)[-1]
@@ -382,12 +407,14 @@ def run_prompt(model, tok, P, nd, depth, variant, windows, conds, args, pid, pri
         for cond in conds:
             if cond in RANDOM_CONDS:
                 rs = [eval_condition(model, tok, cache, tail, target, tests, p, a, b,
-                                     args.generate_all, args.max_new_tokens, nd["word"])
+                                     args.generate_all, args.max_new_tokens, nd["word"],
+                                     fmt=full["fmt"])
                       for p in rand[cond]]
                 wr[cond] = mean_res(rs)
             else:
                 wr[cond] = eval_condition(model, tok, cache, tail, target, tests, sets[cond],
-                                          a, b, args.generate_all, args.max_new_tokens, nd["word"])
+                                          a, b, args.generate_all, args.max_new_tokens, nd["word"],
+                                          fmt=full["fmt"])
         rec["results"][wtag(a, b)] = wr
     return rec
 
@@ -592,6 +619,8 @@ def main():
     ap.add_argument("--preview", type=int, default=0, metavar="N",
                     help="CPU only: print the needles and N prompts, then exit")
     ap.add_argument("--summarize_only", action="store_true")
+    ap.add_argument("--no_gate", action="store_true",
+                    help="do not stop early when Full exact match is low on the first 12 prompts")
     ap.add_argument("--resume", action="store_true")
     ap.add_argument("--overwrite", action="store_true")
     args = ap.parse_args()
@@ -653,6 +682,7 @@ def main():
     n_run = n_skip = 0
     total = len(needles) * len(args.depths) * len(args.variants)
     prior_cache = {}
+    gate = []
     with open(jsonl, "a", encoding="utf-8") as out:
         for nd in needles:
             for depth in args.depths:
@@ -673,6 +703,11 @@ def main():
                     out.write(json.dumps(rec, ensure_ascii=False) + "\n")
                     out.flush()
                     n_run += 1
+                    gate.append(rec["full"]["exact"])
+                    if len(gate) == 12 and np.mean(gate) < 0.5 and not args.no_gate:
+                        raise SystemExit(f"[check 3] Full exact match on the first 12 prompts is "
+                                         f"{np.mean(gate):.2f}: the scoring or prompt is still wrong. "
+                                         f"Stopped early (use --no_gate to override).")
                     if n_run % 10 == 0:
                         el = time.time() - t0
                         print(f"  {n_run}/{total} prompts  {el / n_run:.1f}s/prompt  "

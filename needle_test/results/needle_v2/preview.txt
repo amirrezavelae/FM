@@ -1,0 +1,26 @@
+120 needles, 40 filler articles (of 62), depths [0.1, 0.5, 0.9], windows ['0:16', '0:24', '16:28', '24:28', '0:28'], variants ['deploy']
+
+NEEDLES
+  common   n= 40  pieces: mean 2.5, 3+: 13   e.g. vertebrae(3), ironclads(3), cemeteries(4), temnospondyls(5), battalions(3), temnospondyl(4), extratropical(3), epoxidation(3)
+  rare     n= 40  pieces: mean 2.7, 3+: 25   e.g. headhunting(3), ridgelines(3), trisikads(4), dioxiranes(4), befriended(3), longirostrine(4), paramilitaries(3), invertebrates(3)
+  novel    n= 40  pieces: mean 4.2, 3+: 39   e.g. nirmetufapim(6), leligago(3), zozure(3), vopetiszo(5), nazepabeval(4), vorepuse(4), lestenmivenfel(5), dazonkageva(5)
+
+PROMPTS
+  [common] vertebrae depth=0.1 len=2018 pieces=[' vert', 'ebra', 'e'] positions=282-284  k_prefix=2 k_all_words=109
+      context: '0 years . \nThe secret word is vertebrae.\n The series'
+      question: '\n\nWhat is the secret word? The secret word is'
+  [common] ironclads depth=0.9 len=2017 pieces=[' iron', 'cl', 'ads'] positions=1812-1814  k_prefix=2 k_all_words=27
+      context: ' defend . " \nThe secret word is ironclads.\n Stevens prefers'
+      question: ' "\n\nWhat is the secret word? The secret word is'
+  [common] cemeteries depth=0.1 len=2019 pieces=[' c', 'em', 'eter', 'ies'] positions=128-131  k_prefix=3 k_all_words=191
+      context: ' = = = \nThe secret word is cemeteries.\n In late'
+      question: '\n\nWhat is the secret word? The secret word is'
+  [common] temnospondyls depth=0.5 len=2018 pieces=[' tem', 'nos', 'pond', 'yl', 's'] positions=845-849  k_prefix=4 k_all_words=154
+      context: ' method = = \nThe secret word is temnospondyls.\n In a'
+      question: ' .\n\nWhat is the secret word? The secret word is'
+  [common] battalions depth=0.1 len=2017 pieces=[' batt', 'al', 'ions'] positions=173-175  k_prefix=2 k_all_words=122
+      context: ' and track . \nThe secret word is battalions.\n It is'
+      question: ' .\n\nWhat is the secret word? The secret word is'
+  [common] temnospondyl depth=0.5 len=2019 pieces=[' tem', 'nos', 'pond', 'yl'] positions=1125-1128  k_prefix=3 k_all_words=120
+      context: '0 years . \nThe secret word is temnospondyl.\n The series'
+      question: '\n\nWhat is the secret word? The secret word is'

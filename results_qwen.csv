@@ -1,0 +1,901 @@
+word,variant,set,seed,positions,mode,s,generated,exact,logprob,baseline_logprob
+unhappiness,strict,prefix,,23,drop,0,unhappiness,1,-0.1132,-0.0013
+unhappiness,strict,prefix,,23,drop,2,unhappiness,1,-0.1186,-0.0013
+unhappiness,strict,prefix,,23,drop,4,unhappiness,1,-0.1078,-0.0013
+unhappiness,strict,prefix,,23,drop,6,unhappiness,1,-0.1062,-0.0013
+unhappiness,strict,prefix,,23,drop,8,unhappiness,1,-0.1055,-0.0013
+unhappiness,strict,prefix,,23,drop,10,unhappiness,1,-0.104,-0.0013
+unhappiness,strict,prefix,,23,drop,12,unhappiness,1,-0.0985,-0.0013
+unhappiness,strict,prefix,,23,drop,14,unhappiness,1,-0.0931,-0.0013
+unhappiness,strict,prefix,,23,drop,16,unhappiness,1,-0.0717,-0.0013
+unhappiness,strict,prefix,,23,drop,18,unhappiness,1,-0.0755,-0.0013
+unhappiness,strict,prefix,,23,drop,20,unhappiness,1,-0.0722,-0.0013
+unhappiness,strict,prefix,,23,drop,22,unhappiness,1,-0.0739,-0.0013
+unhappiness,strict,prefix,,23,drop,24,unhappiness,1,-0.0118,-0.0013
+unhappiness,strict,prefix,,23,drop,26,unhappiness,1,-0.0169,-0.0013
+unhappiness,strict,prefix,,23,drop,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,10,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,12,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q8,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q4,0,unhappiness,1,-0.0068,-0.0013
+unhappiness,strict,prefix,,23,q4,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q4,4,unhappiness,1,-0.0014,-0.0013
+unhappiness,strict,prefix,,23,q4,6,unhappiness,1,-0.0014,-0.0013
+unhappiness,strict,prefix,,23,q4,8,unhappiness,1,-0.0014,-0.0013
+unhappiness,strict,prefix,,23,q4,10,unhappiness,1,-0.0014,-0.0013
+unhappiness,strict,prefix,,23,q4,12,unhappiness,1,-0.0014,-0.0013
+unhappiness,strict,prefix,,23,q4,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q4,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q4,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q4,20,unhappiness,1,-0.0014,-0.0013
+unhappiness,strict,prefix,,23,q4,22,unhappiness,1,-0.0014,-0.0013
+unhappiness,strict,prefix,,23,q4,24,unhappiness,1,-0.0014,-0.0013
+unhappiness,strict,prefix,,23,q4,26,unhappiness,1,-0.0015,-0.0013
+unhappiness,strict,prefix,,23,q4,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q3,0,unhappiness,1,-0.1389,-0.0013
+unhappiness,strict,prefix,,23,q3,2,unhappiness,1,-0.0029,-0.0013
+unhappiness,strict,prefix,,23,q3,4,unhappiness,1,-0.0029,-0.0013
+unhappiness,strict,prefix,,23,q3,6,unhappiness,1,-0.0029,-0.0013
+unhappiness,strict,prefix,,23,q3,8,unhappiness,1,-0.0028,-0.0013
+unhappiness,strict,prefix,,23,q3,10,unhappiness,1,-0.0028,-0.0013
+unhappiness,strict,prefix,,23,q3,12,unhappiness,1,-0.0027,-0.0013
+unhappiness,strict,prefix,,23,q3,14,unhappiness,1,-0.0025,-0.0013
+unhappiness,strict,prefix,,23,q3,16,unhappiness,1,-0.002,-0.0013
+unhappiness,strict,prefix,,23,q3,18,unhappiness,1,-0.002,-0.0013
+unhappiness,strict,prefix,,23,q3,20,unhappiness,1,-0.0015,-0.0013
+unhappiness,strict,prefix,,23,q3,22,unhappiness,1,-0.0015,-0.0013
+unhappiness,strict,prefix,,23,q3,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q3,26,unhappiness,1,-0.0014,-0.0013
+unhappiness,strict,prefix,,23,q3,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,prefix,,23,q2,0,,0,-5.0167,-0.0013
+unhappiness,strict,prefix,,23,q2,2,unhappiness,1,-0.0554,-0.0013
+unhappiness,strict,prefix,,23,q2,4,unhappiness,1,-0.0377,-0.0013
+unhappiness,strict,prefix,,23,q2,6,unhappiness,1,-0.0333,-0.0013
+unhappiness,strict,prefix,,23,q2,8,unhappiness,1,-0.0294,-0.0013
+unhappiness,strict,prefix,,23,q2,10,unhappiness,1,-0.0267,-0.0013
+unhappiness,strict,prefix,,23,q2,12,unhappiness,1,-0.0269,-0.0013
+unhappiness,strict,prefix,,23,q2,14,unhappiness,1,-0.0221,-0.0013
+unhappiness,strict,prefix,,23,q2,16,unhappiness,1,-0.0103,-0.0013
+unhappiness,strict,prefix,,23,q2,18,unhappiness,1,-0.0072,-0.0013
+unhappiness,strict,prefix,,23,q2,20,unhappiness,1,-0.0079,-0.0013
+unhappiness,strict,prefix,,23,q2,22,unhappiness,1,-0.0077,-0.0013
+unhappiness,strict,prefix,,23,q2,24,unhappiness,1,-0.0087,-0.0013
+unhappiness,strict,prefix,,23,q2,26,unhappiness,1,-0.0111,-0.0013
+unhappiness,strict,prefix,,23,q2,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,drop,0,unh,0,-19.2207,-0.0013
+unhappiness,strict,last,,24,drop,2,unh,0,-17.3348,-0.0013
+unhappiness,strict,last,,24,drop,4,unh,0,-16.3366,-0.0013
+unhappiness,strict,last,,24,drop,6,unh,0,-14.4995,-0.0013
+unhappiness,strict,last,,24,drop,8,unh,0,-12.0181,-0.0013
+unhappiness,strict,last,,24,drop,10,unh,0,-9.9656,-0.0013
+unhappiness,strict,last,,24,drop,12,unh unh unh unh unh unh unh unh unh unh,0,-7.9579,-0.0013
+unhappiness,strict,last,,24,drop,14,unh unh unh unh unh unh unh unh unh unh,0,-8.0519,-0.0013
+unhappiness,strict,last,,24,drop,16,unh unh unh unh unh unh unh unh unh unh,0,-7.0363,-0.0013
+unhappiness,strict,last,,24,drop,18,unh unh unh unh unh unh unh unh unh unh,0,-5.6695,-0.0013
+unhappiness,strict,last,,24,drop,20,unh unh unh unh unh unh unh unh unh unh,0,-4.4143,-0.0013
+unhappiness,strict,last,,24,drop,22,unh unh unh unh unh unh unh unh unh unh,0,-0.9874,-0.0013
+unhappiness,strict,last,,24,drop,24,unhappiness,1,-0.0027,-0.0013
+unhappiness,strict,last,,24,drop,26,unhappiness,1,-0.0019,-0.0013
+unhappiness,strict,last,,24,drop,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,10,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,12,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q8,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q4,0,unhappiness,1,-0.1472,-0.0013
+unhappiness,strict,last,,24,q4,2,unhappiness,1,-0.0017,-0.0013
+unhappiness,strict,last,,24,q4,4,unhappiness,1,-0.0017,-0.0013
+unhappiness,strict,last,,24,q4,6,unhappiness,1,-0.0017,-0.0013
+unhappiness,strict,last,,24,q4,8,unhappiness,1,-0.0017,-0.0013
+unhappiness,strict,last,,24,q4,10,unhappiness,1,-0.0017,-0.0013
+unhappiness,strict,last,,24,q4,12,unhappiness,1,-0.0017,-0.0013
+unhappiness,strict,last,,24,q4,14,unhappiness,1,-0.0017,-0.0013
+unhappiness,strict,last,,24,q4,16,unhappiness,1,-0.0018,-0.0013
+unhappiness,strict,last,,24,q4,18,unhappiness,1,-0.0017,-0.0013
+unhappiness,strict,last,,24,q4,20,unhappiness,1,-0.0018,-0.0013
+unhappiness,strict,last,,24,q4,22,unhappiness,1,-0.0018,-0.0013
+unhappiness,strict,last,,24,q4,24,unhappiness,1,-0.0019,-0.0013
+unhappiness,strict,last,,24,q4,26,unhappiness,1,-0.0019,-0.0013
+unhappiness,strict,last,,24,q4,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q3,0,,0,-3.5703,-0.0013
+unhappiness,strict,last,,24,q3,2,unhappiness,1,-0.0055,-0.0013
+unhappiness,strict,last,,24,q3,4,unhappiness,1,-0.0049,-0.0013
+unhappiness,strict,last,,24,q3,6,unhappiness,1,-0.0049,-0.0013
+unhappiness,strict,last,,24,q3,8,unhappiness,1,-0.0049,-0.0013
+unhappiness,strict,last,,24,q3,10,unhappiness,1,-0.0052,-0.0013
+unhappiness,strict,last,,24,q3,12,unhappiness,1,-0.0052,-0.0013
+unhappiness,strict,last,,24,q3,14,unhappiness,1,-0.0044,-0.0013
+unhappiness,strict,last,,24,q3,16,unhappiness,1,-0.0043,-0.0013
+unhappiness,strict,last,,24,q3,18,unhappiness,1,-0.004,-0.0013
+unhappiness,strict,last,,24,q3,20,unhappiness,1,-0.0045,-0.0013
+unhappiness,strict,last,,24,q3,22,unhappiness,1,-0.0044,-0.0013
+unhappiness,strict,last,,24,q3,24,unhappiness,1,-0.004,-0.0013
+unhappiness,strict,last,,24,q3,26,unhappiness,1,-0.0037,-0.0013
+unhappiness,strict,last,,24,q3,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,last,,24,q2,0,,0,-6.7938,-0.0013
+unhappiness,strict,last,,24,q2,2,unhappiness,1,-0.0043,-0.0013
+unhappiness,strict,last,,24,q2,4,unhappiness,1,-0.0046,-0.0013
+unhappiness,strict,last,,24,q2,6,unhappiness,1,-0.0048,-0.0013
+unhappiness,strict,last,,24,q2,8,unhappiness,1,-0.0049,-0.0013
+unhappiness,strict,last,,24,q2,10,unhappiness,1,-0.0055,-0.0013
+unhappiness,strict,last,,24,q2,12,unhappiness,1,-0.0062,-0.0013
+unhappiness,strict,last,,24,q2,14,unhappiness,1,-0.0054,-0.0013
+unhappiness,strict,last,,24,q2,16,unhappiness,1,-0.0069,-0.0013
+unhappiness,strict,last,,24,q2,18,unhappiness,1,-0.0069,-0.0013
+unhappiness,strict,last,,24,q2,20,unhappiness,1,-0.0073,-0.0013
+unhappiness,strict,last,,24,q2,22,unhappiness,1,-0.006,-0.0013
+unhappiness,strict,last,,24,q2,24,unhappiness,1,-0.0056,-0.0013
+unhappiness,strict,last,,24,q2,26,unhappiness,1,-0.0061,-0.0013
+unhappiness,strict,last,,24,q2,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,drop,0,,0,-22.126,-0.0013
+unhappiness,strict,word,,23 24,drop,2,window,0,-23.7057,-0.0013
+unhappiness,strict,word,,23 24,drop,4,window,0,-26.9247,-0.0013
+unhappiness,strict,word,,23 24,drop,6,window,0,-25.5667,-0.0013
+unhappiness,strict,word,,23 24,drop,8,window,0,-24.9823,-0.0013
+unhappiness,strict,word,,23 24,drop,10,window,0,-22.4909,-0.0013
+unhappiness,strict,word,,23 24,drop,12,window,0,-24.5427,-0.0013
+unhappiness,strict,word,,23 24,drop,14,window,0,-24.9717,-0.0013
+unhappiness,strict,word,,23 24,drop,16,window,0,-24.9427,-0.0013
+unhappiness,strict,word,,23 24,drop,18,window,0,-23.5477,-0.0013
+unhappiness,strict,word,,23 24,drop,20,window,0,-21.8586,-0.0013
+unhappiness,strict,word,,23 24,drop,22,window,0,-17.4768,-0.0013
+unhappiness,strict,word,,23 24,drop,24,unhappiness,1,-0.9956,-0.0013
+unhappiness,strict,word,,23 24,drop,26,unhappiness,1,-0.1355,-0.0013
+unhappiness,strict,word,,23 24,drop,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,10,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,12,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q8,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q4,0,unhappiness,1,-0.2219,-0.0013
+unhappiness,strict,word,,23 24,q4,2,unhappiness,1,-0.0019,-0.0013
+unhappiness,strict,word,,23 24,q4,4,unhappiness,1,-0.002,-0.0013
+unhappiness,strict,word,,23 24,q4,6,unhappiness,1,-0.002,-0.0013
+unhappiness,strict,word,,23 24,q4,8,unhappiness,1,-0.002,-0.0013
+unhappiness,strict,word,,23 24,q4,10,unhappiness,1,-0.002,-0.0013
+unhappiness,strict,word,,23 24,q4,12,unhappiness,1,-0.002,-0.0013
+unhappiness,strict,word,,23 24,q4,14,unhappiness,1,-0.0019,-0.0013
+unhappiness,strict,word,,23 24,q4,16,unhappiness,1,-0.002,-0.0013
+unhappiness,strict,word,,23 24,q4,18,unhappiness,1,-0.002,-0.0013
+unhappiness,strict,word,,23 24,q4,20,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,word,,23 24,q4,22,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,word,,23 24,q4,24,unhappiness,1,-0.0023,-0.0013
+unhappiness,strict,word,,23 24,q4,26,unhappiness,1,-0.0024,-0.0013
+unhappiness,strict,word,,23 24,q4,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q3,0,,0,-8.7204,-0.0013
+unhappiness,strict,word,,23 24,q3,2,unhappiness,1,-0.0044,-0.0013
+unhappiness,strict,word,,23 24,q3,4,unhappiness,1,-0.0039,-0.0013
+unhappiness,strict,word,,23 24,q3,6,unhappiness,1,-0.004,-0.0013
+unhappiness,strict,word,,23 24,q3,8,unhappiness,1,-0.0039,-0.0013
+unhappiness,strict,word,,23 24,q3,10,unhappiness,1,-0.0041,-0.0013
+unhappiness,strict,word,,23 24,q3,12,unhappiness,1,-0.0039,-0.0013
+unhappiness,strict,word,,23 24,q3,14,unhappiness,1,-0.0034,-0.0013
+unhappiness,strict,word,,23 24,q3,16,unhappiness,1,-0.0028,-0.0013
+unhappiness,strict,word,,23 24,q3,18,unhappiness,1,-0.0029,-0.0013
+unhappiness,strict,word,,23 24,q3,20,unhappiness,1,-0.0028,-0.0013
+unhappiness,strict,word,,23 24,q3,22,unhappiness,1,-0.0028,-0.0013
+unhappiness,strict,word,,23 24,q3,24,unhappiness,1,-0.0021,-0.0013
+unhappiness,strict,word,,23 24,q3,26,unhappiness,1,-0.002,-0.0013
+unhappiness,strict,word,,23 24,q3,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,word,,23 24,q2,0,,0,-8.0757,-0.0013
+unhappiness,strict,word,,23 24,q2,2,unhappiness,1,-0.0672,-0.0013
+unhappiness,strict,word,,23 24,q2,4,unhappiness,1,-0.0388,-0.0013
+unhappiness,strict,word,,23 24,q2,6,unhappiness,1,-0.0536,-0.0013
+unhappiness,strict,word,,23 24,q2,8,unhappiness,1,-0.0421,-0.0013
+unhappiness,strict,word,,23 24,q2,10,unhappiness,1,-0.02,-0.0013
+unhappiness,strict,word,,23 24,q2,12,unhappiness,1,-0.0226,-0.0013
+unhappiness,strict,word,,23 24,q2,14,unhappiness,1,-0.0222,-0.0013
+unhappiness,strict,word,,23 24,q2,16,unhappiness,1,-0.0123,-0.0013
+unhappiness,strict,word,,23 24,q2,18,unhappiness,1,-0.0087,-0.0013
+unhappiness,strict,word,,23 24,q2,20,unhappiness,1,-0.0113,-0.0013
+unhappiness,strict,word,,23 24,q2,22,unhappiness,1,-0.01,-0.0013
+unhappiness,strict,word,,23 24,q2,24,unhappiness,1,-0.0086,-0.0013
+unhappiness,strict,word,,23 24,q2,26,unhappiness,1,-0.0069,-0.0013
+unhappiness,strict,word,,23 24,q2,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,drop,0,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,1,5,drop,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,drop,0,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,drop,2,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,1,5,drop,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,drop,2,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,drop,4,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,1,5,drop,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,drop,4,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,drop,6,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,1,5,drop,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,drop,6,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,drop,8,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,1,5,drop,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,drop,8,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,drop,10,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,1,5,drop,10,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,2,2,drop,10,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,drop,12,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,1,5,drop,12,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,2,2,drop,12,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,drop,14,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,1,5,drop,14,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,2,2,drop,14,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,drop,16,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,1,5,drop,16,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,2,2,drop,16,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,drop,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,drop,18,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,2,2,drop,18,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,drop,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,drop,20,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,2,2,drop,20,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,drop,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,drop,22,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,2,2,drop,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,drop,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,drop,24,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,2,2,drop,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,drop,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,drop,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,drop,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,drop,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,drop,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,drop,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,10,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,10,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,10,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,12,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,12,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,12,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q8,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q8,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q8,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q4,0,unhappiness,1,-0.001,-0.0013
+unhappiness,strict,control,1,5,q4,0,unhappiness,1,-0.0021,-0.0013
+unhappiness,strict,control,2,2,q4,0,unhappiness,1,-0.0018,-0.0013
+unhappiness,strict,control,0,13,q4,2,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,1,5,q4,2,unhappiness,1,-0.0021,-0.0013
+unhappiness,strict,control,2,2,q4,2,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,q4,4,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,1,5,q4,4,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,2,2,q4,4,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,q4,6,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,1,5,q4,6,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,2,2,q4,6,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,q4,8,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,1,5,q4,8,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,2,2,q4,8,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,q4,10,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,1,5,q4,10,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,2,2,q4,10,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,q4,12,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,1,5,q4,12,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,2,2,q4,12,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,0,13,q4,14,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,1,5,q4,14,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,2,2,q4,14,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,0,13,q4,16,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,1,5,q4,16,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,2,2,q4,16,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,0,13,q4,18,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,1,5,q4,18,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,2,2,q4,18,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,0,13,q4,20,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,1,5,q4,20,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,2,2,q4,20,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,0,13,q4,22,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,1,5,q4,22,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,2,2,q4,22,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,0,13,q4,24,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,1,5,q4,24,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,2,2,q4,24,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,0,13,q4,26,unhappiness,1,-0.0012,-0.0013
+unhappiness,strict,control,1,5,q4,26,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,2,2,q4,26,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,0,13,q4,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q4,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q4,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q3,0,:,0,-5.2712,-0.0013
+unhappiness,strict,control,1,5,q3,0,:,0,-6.4022,-0.0013
+unhappiness,strict,control,2,2,q3,0,,0,-2.8631,-0.0013
+unhappiness,strict,control,0,13,q3,2,unhappiness,1,-0.0009,-0.0013
+unhappiness,strict,control,1,5,q3,2,unhappiness,1,-0.0029,-0.0013
+unhappiness,strict,control,2,2,q3,2,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,0,13,q3,4,unhappiness,1,-0.0009,-0.0013
+unhappiness,strict,control,1,5,q3,4,unhappiness,1,-0.0029,-0.0013
+unhappiness,strict,control,2,2,q3,4,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,0,13,q3,6,unhappiness,1,-0.0009,-0.0013
+unhappiness,strict,control,1,5,q3,6,unhappiness,1,-0.0029,-0.0013
+unhappiness,strict,control,2,2,q3,6,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,0,13,q3,8,unhappiness,1,-0.001,-0.0013
+unhappiness,strict,control,1,5,q3,8,unhappiness,1,-0.0029,-0.0013
+unhappiness,strict,control,2,2,q3,8,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,0,13,q3,10,unhappiness,1,-0.001,-0.0013
+unhappiness,strict,control,1,5,q3,10,unhappiness,1,-0.0029,-0.0013
+unhappiness,strict,control,2,2,q3,10,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,0,13,q3,12,unhappiness,1,-0.0009,-0.0013
+unhappiness,strict,control,1,5,q3,12,unhappiness,1,-0.0028,-0.0013
+unhappiness,strict,control,2,2,q3,12,unhappiness,1,-0.0022,-0.0013
+unhappiness,strict,control,0,13,q3,14,unhappiness,1,-0.0009,-0.0013
+unhappiness,strict,control,1,5,q3,14,unhappiness,1,-0.0029,-0.0013
+unhappiness,strict,control,2,2,q3,14,unhappiness,1,-0.002,-0.0013
+unhappiness,strict,control,0,13,q3,16,unhappiness,1,-0.0009,-0.0013
+unhappiness,strict,control,1,5,q3,16,unhappiness,1,-0.0029,-0.0013
+unhappiness,strict,control,2,2,q3,16,unhappiness,1,-0.002,-0.0013
+unhappiness,strict,control,0,13,q3,18,unhappiness,1,-0.0009,-0.0013
+unhappiness,strict,control,1,5,q3,18,unhappiness,1,-0.0028,-0.0013
+unhappiness,strict,control,2,2,q3,18,unhappiness,1,-0.002,-0.0013
+unhappiness,strict,control,0,13,q3,20,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,1,5,q3,20,unhappiness,1,-0.0024,-0.0013
+unhappiness,strict,control,2,2,q3,20,unhappiness,1,-0.0019,-0.0013
+unhappiness,strict,control,0,13,q3,22,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,1,5,q3,22,unhappiness,1,-0.0024,-0.0013
+unhappiness,strict,control,2,2,q3,22,unhappiness,1,-0.0019,-0.0013
+unhappiness,strict,control,0,13,q3,24,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,1,5,q3,24,unhappiness,1,-0.0024,-0.0013
+unhappiness,strict,control,2,2,q3,24,unhappiness,1,-0.0019,-0.0013
+unhappiness,strict,control,0,13,q3,26,unhappiness,1,-0.0011,-0.0013
+unhappiness,strict,control,1,5,q3,26,unhappiness,1,-0.0024,-0.0013
+unhappiness,strict,control,2,2,q3,26,unhappiness,1,-0.0019,-0.0013
+unhappiness,strict,control,0,13,q3,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q3,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q3,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,0,13,q2,0,,0,-3.6985,-0.0013
+unhappiness,strict,control,1,5,q2,0,,0,-4.3111,-0.0013
+unhappiness,strict,control,2,2,q2,0,word word word word word word word word word word,0,-1.6606,-0.0013
+unhappiness,strict,control,0,13,q2,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q2,2,unhappiness,1,-0.0024,-0.0013
+unhappiness,strict,control,2,2,q2,2,unhappiness,1,-0.0037,-0.0013
+unhappiness,strict,control,0,13,q2,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q2,4,unhappiness,1,-0.0023,-0.0013
+unhappiness,strict,control,2,2,q2,4,unhappiness,1,-0.0038,-0.0013
+unhappiness,strict,control,0,13,q2,6,unhappiness,1,-0.0014,-0.0013
+unhappiness,strict,control,1,5,q2,6,unhappiness,1,-0.0024,-0.0013
+unhappiness,strict,control,2,2,q2,6,unhappiness,1,-0.0038,-0.0013
+unhappiness,strict,control,0,13,q2,8,unhappiness,1,-0.0014,-0.0013
+unhappiness,strict,control,1,5,q2,8,unhappiness,1,-0.0024,-0.0013
+unhappiness,strict,control,2,2,q2,8,unhappiness,1,-0.0039,-0.0013
+unhappiness,strict,control,0,13,q2,10,unhappiness,1,-0.0014,-0.0013
+unhappiness,strict,control,1,5,q2,10,unhappiness,1,-0.0024,-0.0013
+unhappiness,strict,control,2,2,q2,10,unhappiness,1,-0.0038,-0.0013
+unhappiness,strict,control,0,13,q2,12,unhappiness,1,-0.0014,-0.0013
+unhappiness,strict,control,1,5,q2,12,unhappiness,1,-0.0024,-0.0013
+unhappiness,strict,control,2,2,q2,12,unhappiness,1,-0.0038,-0.0013
+unhappiness,strict,control,0,13,q2,14,unhappiness,1,-0.0015,-0.0013
+unhappiness,strict,control,1,5,q2,14,unhappiness,1,-0.0026,-0.0013
+unhappiness,strict,control,2,2,q2,14,unhappiness,1,-0.0035,-0.0013
+unhappiness,strict,control,0,13,q2,16,unhappiness,1,-0.0017,-0.0013
+unhappiness,strict,control,1,5,q2,16,unhappiness,1,-0.0026,-0.0013
+unhappiness,strict,control,2,2,q2,16,unhappiness,1,-0.0036,-0.0013
+unhappiness,strict,control,0,13,q2,18,unhappiness,1,-0.0015,-0.0013
+unhappiness,strict,control,1,5,q2,18,unhappiness,1,-0.0027,-0.0013
+unhappiness,strict,control,2,2,q2,18,unhappiness,1,-0.0035,-0.0013
+unhappiness,strict,control,0,13,q2,20,unhappiness,1,-0.0019,-0.0013
+unhappiness,strict,control,1,5,q2,20,unhappiness,1,-0.0036,-0.0013
+unhappiness,strict,control,2,2,q2,20,unhappiness,1,-0.0036,-0.0013
+unhappiness,strict,control,0,13,q2,22,unhappiness,1,-0.0019,-0.0013
+unhappiness,strict,control,1,5,q2,22,unhappiness,1,-0.0036,-0.0013
+unhappiness,strict,control,2,2,q2,22,unhappiness,1,-0.0035,-0.0013
+unhappiness,strict,control,0,13,q2,24,unhappiness,1,-0.0019,-0.0013
+unhappiness,strict,control,1,5,q2,24,unhappiness,1,-0.0036,-0.0013
+unhappiness,strict,control,2,2,q2,24,unhappiness,1,-0.0035,-0.0013
+unhappiness,strict,control,0,13,q2,26,unhappiness,1,-0.0019,-0.0013
+unhappiness,strict,control,1,5,q2,26,unhappiness,1,-0.0035,-0.0013
+unhappiness,strict,control,2,2,q2,26,unhappiness,1,-0.0035,-0.0013
+unhappiness,strict,control,0,13,q2,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,1,5,q2,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,strict,control,2,2,q2,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,drop,0,unhappiness,1,-0.0965,-0.0013
+unhappiness,deploy,prefix,,23,drop,2,unhappiness,1,-0.0989,-0.0013
+unhappiness,deploy,prefix,,23,drop,4,unhappiness,1,-0.081,-0.0013
+unhappiness,deploy,prefix,,23,drop,6,unhappiness,1,-0.0788,-0.0013
+unhappiness,deploy,prefix,,23,drop,8,unhappiness,1,-0.0785,-0.0013
+unhappiness,deploy,prefix,,23,drop,10,unhappiness,1,-0.0782,-0.0013
+unhappiness,deploy,prefix,,23,drop,12,unhappiness,1,-0.0783,-0.0013
+unhappiness,deploy,prefix,,23,drop,14,unhappiness,1,-0.0762,-0.0013
+unhappiness,deploy,prefix,,23,drop,16,unhappiness,1,-0.0633,-0.0013
+unhappiness,deploy,prefix,,23,drop,18,unhappiness,1,-0.0645,-0.0013
+unhappiness,deploy,prefix,,23,drop,20,unhappiness,1,-0.0623,-0.0013
+unhappiness,deploy,prefix,,23,drop,22,unhappiness,1,-0.0673,-0.0013
+unhappiness,deploy,prefix,,23,drop,24,unhappiness,1,-0.0117,-0.0013
+unhappiness,deploy,prefix,,23,drop,26,unhappiness,1,-0.0169,-0.0013
+unhappiness,deploy,prefix,,23,drop,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,10,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,12,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q8,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q4,0,unhappiness,1,-0.0101,-0.0013
+unhappiness,deploy,prefix,,23,q4,2,unhappiness,1,-0.0014,-0.0013
+unhappiness,deploy,prefix,,23,q4,4,unhappiness,1,-0.0014,-0.0013
+unhappiness,deploy,prefix,,23,q4,6,unhappiness,1,-0.0014,-0.0013
+unhappiness,deploy,prefix,,23,q4,8,unhappiness,1,-0.0014,-0.0013
+unhappiness,deploy,prefix,,23,q4,10,unhappiness,1,-0.0014,-0.0013
+unhappiness,deploy,prefix,,23,q4,12,unhappiness,1,-0.0014,-0.0013
+unhappiness,deploy,prefix,,23,q4,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q4,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q4,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q4,20,unhappiness,1,-0.0014,-0.0013
+unhappiness,deploy,prefix,,23,q4,22,unhappiness,1,-0.0014,-0.0013
+unhappiness,deploy,prefix,,23,q4,24,unhappiness,1,-0.0014,-0.0013
+unhappiness,deploy,prefix,,23,q4,26,unhappiness,1,-0.0015,-0.0013
+unhappiness,deploy,prefix,,23,q4,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q3,0,unhappiness,1,-0.0214,-0.0013
+unhappiness,deploy,prefix,,23,q3,2,unhappiness,1,-0.0021,-0.0013
+unhappiness,deploy,prefix,,23,q3,4,unhappiness,1,-0.0021,-0.0013
+unhappiness,deploy,prefix,,23,q3,6,unhappiness,1,-0.0021,-0.0013
+unhappiness,deploy,prefix,,23,q3,8,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,prefix,,23,q3,10,unhappiness,1,-0.0021,-0.0013
+unhappiness,deploy,prefix,,23,q3,12,unhappiness,1,-0.0021,-0.0013
+unhappiness,deploy,prefix,,23,q3,14,unhappiness,1,-0.002,-0.0013
+unhappiness,deploy,prefix,,23,q3,16,unhappiness,1,-0.0017,-0.0013
+unhappiness,deploy,prefix,,23,q3,18,unhappiness,1,-0.0017,-0.0013
+unhappiness,deploy,prefix,,23,q3,20,unhappiness,1,-0.0015,-0.0013
+unhappiness,deploy,prefix,,23,q3,22,unhappiness,1,-0.0015,-0.0013
+unhappiness,deploy,prefix,,23,q3,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q3,26,unhappiness,1,-0.0014,-0.0013
+unhappiness,deploy,prefix,,23,q3,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,prefix,,23,q2,0,:,0,-4.9336,-0.0013
+unhappiness,deploy,prefix,,23,q2,2,unhappiness,1,-0.0234,-0.0013
+unhappiness,deploy,prefix,,23,q2,4,unhappiness,1,-0.0172,-0.0013
+unhappiness,deploy,prefix,,23,q2,6,unhappiness,1,-0.0179,-0.0013
+unhappiness,deploy,prefix,,23,q2,8,unhappiness,1,-0.0192,-0.0013
+unhappiness,deploy,prefix,,23,q2,10,unhappiness,1,-0.0172,-0.0013
+unhappiness,deploy,prefix,,23,q2,12,unhappiness,1,-0.0175,-0.0013
+unhappiness,deploy,prefix,,23,q2,14,unhappiness,1,-0.0144,-0.0013
+unhappiness,deploy,prefix,,23,q2,16,unhappiness,1,-0.0102,-0.0013
+unhappiness,deploy,prefix,,23,q2,18,unhappiness,1,-0.0076,-0.0013
+unhappiness,deploy,prefix,,23,q2,20,unhappiness,1,-0.0078,-0.0013
+unhappiness,deploy,prefix,,23,q2,22,unhappiness,1,-0.0077,-0.0013
+unhappiness,deploy,prefix,,23,q2,24,unhappiness,1,-0.0088,-0.0013
+unhappiness,deploy,prefix,,23,q2,26,unhappiness,1,-0.0111,-0.0013
+unhappiness,deploy,prefix,,23,q2,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,drop,0,unh unh unh,0,-9.9689,-0.0013
+unhappiness,deploy,last,,24,drop,2,unh unh unh,0,-9.8894,-0.0013
+unhappiness,deploy,last,,24,drop,4,unh unh unh,0,-9.6145,-0.0013
+unhappiness,deploy,last,,24,drop,6,unh unh unh unh unh unh unh unh unh unh,0,-9.3991,-0.0013
+unhappiness,deploy,last,,24,drop,8,unh unh unh unh unh unh unh unh unh unh,0,-8.9716,-0.0013
+unhappiness,deploy,last,,24,drop,10,unh unh unh unh unh unh unh unh unh unh,0,-7.6943,-0.0013
+unhappiness,deploy,last,,24,drop,12,unh unh unh unh unh unh unh unh unh unh,0,-7.4907,-0.0013
+unhappiness,deploy,last,,24,drop,14,unh unh unh unh unh unh unh unh unh unh,0,-7.7402,-0.0013
+unhappiness,deploy,last,,24,drop,16,unh unh unh unh unh unh unh unh unh unh,0,-6.7865,-0.0013
+unhappiness,deploy,last,,24,drop,18,unh unh unh unh unh unh unh unh unh unh,0,-5.4248,-0.0013
+unhappiness,deploy,last,,24,drop,20,unh unh unh unh unh unh unh unh unh unh,0,-4.2438,-0.0013
+unhappiness,deploy,last,,24,drop,22,unh unh unh unh unh unh unh unh unh unh,0,-0.9792,-0.0013
+unhappiness,deploy,last,,24,drop,24,unhappiness,1,-0.0027,-0.0013
+unhappiness,deploy,last,,24,drop,26,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,last,,24,drop,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,10,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,12,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q8,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q4,0,unhappiness,1,-0.0018,-0.0013
+unhappiness,deploy,last,,24,q4,2,unhappiness,1,-0.0016,-0.0013
+unhappiness,deploy,last,,24,q4,4,unhappiness,1,-0.0016,-0.0013
+unhappiness,deploy,last,,24,q4,6,unhappiness,1,-0.0016,-0.0013
+unhappiness,deploy,last,,24,q4,8,unhappiness,1,-0.0016,-0.0013
+unhappiness,deploy,last,,24,q4,10,unhappiness,1,-0.0016,-0.0013
+unhappiness,deploy,last,,24,q4,12,unhappiness,1,-0.0016,-0.0013
+unhappiness,deploy,last,,24,q4,14,unhappiness,1,-0.0017,-0.0013
+unhappiness,deploy,last,,24,q4,16,unhappiness,1,-0.0017,-0.0013
+unhappiness,deploy,last,,24,q4,18,unhappiness,1,-0.0017,-0.0013
+unhappiness,deploy,last,,24,q4,20,unhappiness,1,-0.0018,-0.0013
+unhappiness,deploy,last,,24,q4,22,unhappiness,1,-0.0018,-0.0013
+unhappiness,deploy,last,,24,q4,24,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,last,,24,q4,26,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,last,,24,q4,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q3,0,: unhappiness,0,-2.2944,-0.0013
+unhappiness,deploy,last,,24,q3,2,unhappiness,1,-0.0061,-0.0013
+unhappiness,deploy,last,,24,q3,4,unhappiness,1,-0.0052,-0.0013
+unhappiness,deploy,last,,24,q3,6,unhappiness,1,-0.0051,-0.0013
+unhappiness,deploy,last,,24,q3,8,unhappiness,1,-0.0051,-0.0013
+unhappiness,deploy,last,,24,q3,10,unhappiness,1,-0.0053,-0.0013
+unhappiness,deploy,last,,24,q3,12,unhappiness,1,-0.0054,-0.0013
+unhappiness,deploy,last,,24,q3,14,unhappiness,1,-0.0046,-0.0013
+unhappiness,deploy,last,,24,q3,16,unhappiness,1,-0.0045,-0.0013
+unhappiness,deploy,last,,24,q3,18,unhappiness,1,-0.0043,-0.0013
+unhappiness,deploy,last,,24,q3,20,unhappiness,1,-0.0045,-0.0013
+unhappiness,deploy,last,,24,q3,22,unhappiness,1,-0.0044,-0.0013
+unhappiness,deploy,last,,24,q3,24,unhappiness,1,-0.004,-0.0013
+unhappiness,deploy,last,,24,q3,26,unhappiness,1,-0.0037,-0.0013
+unhappiness,deploy,last,,24,q3,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,last,,24,q2,0,:,0,-1.719,-0.0013
+unhappiness,deploy,last,,24,q2,2,unhappiness,1,-0.0059,-0.0013
+unhappiness,deploy,last,,24,q2,4,unhappiness,1,-0.0061,-0.0013
+unhappiness,deploy,last,,24,q2,6,unhappiness,1,-0.0052,-0.0013
+unhappiness,deploy,last,,24,q2,8,unhappiness,1,-0.0059,-0.0013
+unhappiness,deploy,last,,24,q2,10,unhappiness,1,-0.0064,-0.0013
+unhappiness,deploy,last,,24,q2,12,unhappiness,1,-0.0067,-0.0013
+unhappiness,deploy,last,,24,q2,14,unhappiness,1,-0.0045,-0.0013
+unhappiness,deploy,last,,24,q2,16,unhappiness,1,-0.0066,-0.0013
+unhappiness,deploy,last,,24,q2,18,unhappiness,1,-0.0067,-0.0013
+unhappiness,deploy,last,,24,q2,20,unhappiness,1,-0.0071,-0.0013
+unhappiness,deploy,last,,24,q2,22,unhappiness,1,-0.006,-0.0013
+unhappiness,deploy,last,,24,q2,24,unhappiness,1,-0.0056,-0.0013
+unhappiness,deploy,last,,24,q2,26,unhappiness,1,-0.006,-0.0013
+unhappiness,deploy,last,,24,q2,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,drop,0,window,0,-24.8017,-0.0013
+unhappiness,deploy,word,,23 24,drop,2,window,0,-25.529,-0.0013
+unhappiness,deploy,word,,23 24,drop,4,window,0,-29.2457,-0.0013
+unhappiness,deploy,word,,23 24,drop,6,window,0,-28.0314,-0.0013
+unhappiness,deploy,word,,23 24,drop,8,window,0,-27.1794,-0.0013
+unhappiness,deploy,word,,23 24,drop,10,window,0,-24.8658,-0.0013
+unhappiness,deploy,word,,23 24,drop,12,window,0,-24.4407,-0.0013
+unhappiness,deploy,word,,23 24,drop,14,window,0,-24.2743,-0.0013
+unhappiness,deploy,word,,23 24,drop,16,window,0,-23.6151,-0.0013
+unhappiness,deploy,word,,23 24,drop,18,window,0,-22.2407,-0.0013
+unhappiness,deploy,word,,23 24,drop,20,window,0,-20.7084,-0.0013
+unhappiness,deploy,word,,23 24,drop,22,window,0,-16.8601,-0.0013
+unhappiness,deploy,word,,23 24,drop,24,unhappiness,1,-0.9885,-0.0013
+unhappiness,deploy,word,,23 24,drop,26,unhappiness,1,-0.1353,-0.0013
+unhappiness,deploy,word,,23 24,drop,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,10,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,12,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q8,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q4,0,unhappiness,1,-0.0084,-0.0013
+unhappiness,deploy,word,,23 24,q4,2,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,word,,23 24,q4,4,unhappiness,1,-0.002,-0.0013
+unhappiness,deploy,word,,23 24,q4,6,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,word,,23 24,q4,8,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,word,,23 24,q4,10,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,word,,23 24,q4,12,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,word,,23 24,q4,14,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,word,,23 24,q4,16,unhappiness,1,-0.002,-0.0013
+unhappiness,deploy,word,,23 24,q4,18,unhappiness,1,-0.002,-0.0013
+unhappiness,deploy,word,,23 24,q4,20,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,word,,23 24,q4,22,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,word,,23 24,q4,24,unhappiness,1,-0.0023,-0.0013
+unhappiness,deploy,word,,23 24,q4,26,unhappiness,1,-0.0024,-0.0013
+unhappiness,deploy,word,,23 24,q4,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q3,0,:::,0,-3.4929,-0.0013
+unhappiness,deploy,word,,23 24,q3,2,unhappiness,1,-0.0041,-0.0013
+unhappiness,deploy,word,,23 24,q3,4,unhappiness,1,-0.0036,-0.0013
+unhappiness,deploy,word,,23 24,q3,6,unhappiness,1,-0.0036,-0.0013
+unhappiness,deploy,word,,23 24,q3,8,unhappiness,1,-0.0036,-0.0013
+unhappiness,deploy,word,,23 24,q3,10,unhappiness,1,-0.0038,-0.0013
+unhappiness,deploy,word,,23 24,q3,12,unhappiness,1,-0.0038,-0.0013
+unhappiness,deploy,word,,23 24,q3,14,unhappiness,1,-0.0033,-0.0013
+unhappiness,deploy,word,,23 24,q3,16,unhappiness,1,-0.0029,-0.0013
+unhappiness,deploy,word,,23 24,q3,18,unhappiness,1,-0.0029,-0.0013
+unhappiness,deploy,word,,23 24,q3,20,unhappiness,1,-0.0028,-0.0013
+unhappiness,deploy,word,,23 24,q3,22,unhappiness,1,-0.0028,-0.0013
+unhappiness,deploy,word,,23 24,q3,24,unhappiness,1,-0.0021,-0.0013
+unhappiness,deploy,word,,23 24,q3,26,unhappiness,1,-0.002,-0.0013
+unhappiness,deploy,word,,23 24,q3,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,word,,23 24,q2,0,unhappiness,1,-0.507,-0.0013
+unhappiness,deploy,word,,23 24,q2,2,unhappiness,1,-0.0537,-0.0013
+unhappiness,deploy,word,,23 24,q2,4,unhappiness,1,-0.0277,-0.0013
+unhappiness,deploy,word,,23 24,q2,6,unhappiness,1,-0.047,-0.0013
+unhappiness,deploy,word,,23 24,q2,8,unhappiness,1,-0.0384,-0.0013
+unhappiness,deploy,word,,23 24,q2,10,unhappiness,1,-0.0179,-0.0013
+unhappiness,deploy,word,,23 24,q2,12,unhappiness,1,-0.0194,-0.0013
+unhappiness,deploy,word,,23 24,q2,14,unhappiness,1,-0.0147,-0.0013
+unhappiness,deploy,word,,23 24,q2,16,unhappiness,1,-0.0109,-0.0013
+unhappiness,deploy,word,,23 24,q2,18,unhappiness,1,-0.0082,-0.0013
+unhappiness,deploy,word,,23 24,q2,20,unhappiness,1,-0.0112,-0.0013
+unhappiness,deploy,word,,23 24,q2,22,unhappiness,1,-0.01,-0.0013
+unhappiness,deploy,word,,23 24,q2,24,unhappiness,1,-0.0086,-0.0013
+unhappiness,deploy,word,,23 24,q2,26,unhappiness,1,-0.007,-0.0013
+unhappiness,deploy,word,,23 24,q2,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,drop,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,drop,0,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,drop,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,drop,2,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,drop,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,drop,4,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,drop,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,drop,6,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,drop,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,8,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,2,2,drop,8,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,drop,10,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,10,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,2,2,drop,10,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,drop,12,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,12,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,2,2,drop,12,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,drop,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,14,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,2,2,drop,14,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,drop,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,16,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,2,2,drop,16,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,drop,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,18,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,2,2,drop,18,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,drop,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,20,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,2,2,drop,20,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,drop,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,22,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,2,2,drop,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,drop,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,24,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,2,2,drop,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,drop,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,drop,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,drop,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,drop,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,drop,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,0,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,2,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,4,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,6,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,8,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,10,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,10,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,10,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,12,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,12,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,12,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,14,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,16,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,18,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,20,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,22,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,24,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,26,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q8,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q8,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q8,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q4,0,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q4,0,unhappiness,1,-0.0021,-0.0013
+unhappiness,deploy,control,2,2,q4,0,unhappiness,1,-0.0036,-0.0013
+unhappiness,deploy,control,0,13,q4,2,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q4,2,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,control,2,2,q4,2,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,q4,4,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q4,4,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,control,2,2,q4,4,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,q4,6,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q4,6,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,control,2,2,q4,6,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,q4,8,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q4,8,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,control,2,2,q4,8,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,q4,10,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q4,10,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,control,2,2,q4,10,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,q4,12,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q4,12,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,control,2,2,q4,12,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,0,13,q4,14,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q4,14,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,control,2,2,q4,14,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,0,13,q4,16,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q4,16,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,control,2,2,q4,16,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,0,13,q4,18,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q4,18,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,control,2,2,q4,18,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,0,13,q4,20,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,1,5,q4,20,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,control,2,2,q4,20,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,0,13,q4,22,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,1,5,q4,22,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,control,2,2,q4,22,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,0,13,q4,24,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,1,5,q4,24,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,control,2,2,q4,24,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,0,13,q4,26,unhappiness,1,-0.0012,-0.0013
+unhappiness,deploy,control,1,5,q4,26,unhappiness,1,-0.0022,-0.0013
+unhappiness,deploy,control,2,2,q4,26,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,0,13,q4,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q4,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q4,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q3,0,:::::WordWordWordWordWord,0,-3.5331,-0.0013
+unhappiness,deploy,control,1,5,q3,0,::: unhappiness,0,-4.4745,-0.0013
+unhappiness,deploy,control,2,2,q3,0,:: unhappiness,0,-1.8051,-0.0013
+unhappiness,deploy,control,0,13,q3,2,unhappiness,1,-0.0009,-0.0013
+unhappiness,deploy,control,1,5,q3,2,unhappiness,1,-0.0027,-0.0013
+unhappiness,deploy,control,2,2,q3,2,unhappiness,1,-0.002,-0.0013
+unhappiness,deploy,control,0,13,q3,4,unhappiness,1,-0.0009,-0.0013
+unhappiness,deploy,control,1,5,q3,4,unhappiness,1,-0.0026,-0.0013
+unhappiness,deploy,control,2,2,q3,4,unhappiness,1,-0.0021,-0.0013
+unhappiness,deploy,control,0,13,q3,6,unhappiness,1,-0.0009,-0.0013
+unhappiness,deploy,control,1,5,q3,6,unhappiness,1,-0.0026,-0.0013
+unhappiness,deploy,control,2,2,q3,6,unhappiness,1,-0.002,-0.0013
+unhappiness,deploy,control,0,13,q3,8,unhappiness,1,-0.0009,-0.0013
+unhappiness,deploy,control,1,5,q3,8,unhappiness,1,-0.0026,-0.0013
+unhappiness,deploy,control,2,2,q3,8,unhappiness,1,-0.002,-0.0013
+unhappiness,deploy,control,0,13,q3,10,unhappiness,1,-0.0009,-0.0013
+unhappiness,deploy,control,1,5,q3,10,unhappiness,1,-0.0026,-0.0013
+unhappiness,deploy,control,2,2,q3,10,unhappiness,1,-0.002,-0.0013
+unhappiness,deploy,control,0,13,q3,12,unhappiness,1,-0.0009,-0.0013
+unhappiness,deploy,control,1,5,q3,12,unhappiness,1,-0.0026,-0.0013
+unhappiness,deploy,control,2,2,q3,12,unhappiness,1,-0.002,-0.0013
+unhappiness,deploy,control,0,13,q3,14,unhappiness,1,-0.0009,-0.0013
+unhappiness,deploy,control,1,5,q3,14,unhappiness,1,-0.0027,-0.0013
+unhappiness,deploy,control,2,2,q3,14,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,control,0,13,q3,16,unhappiness,1,-0.0009,-0.0013
+unhappiness,deploy,control,1,5,q3,16,unhappiness,1,-0.0027,-0.0013
+unhappiness,deploy,control,2,2,q3,16,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,control,0,13,q3,18,unhappiness,1,-0.0009,-0.0013
+unhappiness,deploy,control,1,5,q3,18,unhappiness,1,-0.0027,-0.0013
+unhappiness,deploy,control,2,2,q3,18,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,control,0,13,q3,20,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q3,20,unhappiness,1,-0.0024,-0.0013
+unhappiness,deploy,control,2,2,q3,20,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,control,0,13,q3,22,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q3,22,unhappiness,1,-0.0024,-0.0013
+unhappiness,deploy,control,2,2,q3,22,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,control,0,13,q3,24,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q3,24,unhappiness,1,-0.0024,-0.0013
+unhappiness,deploy,control,2,2,q3,24,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,control,0,13,q3,26,unhappiness,1,-0.0011,-0.0013
+unhappiness,deploy,control,1,5,q3,26,unhappiness,1,-0.0024,-0.0013
+unhappiness,deploy,control,2,2,q3,26,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,control,0,13,q3,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q3,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q3,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,0,13,q2,0,::: Word:WordWordWordWordWord,0,-1.7027,-0.0013
+unhappiness,deploy,control,1,5,q2,0,::: WordWordWordWordWordWordWord,0,-2.1643,-0.0013
+unhappiness,deploy,control,2,2,q2,0,: unhappiness,0,-1.7404,-0.0013
+unhappiness,deploy,control,0,13,q2,2,unhappiness,1,-0.0014,-0.0013
+unhappiness,deploy,control,1,5,q2,2,unhappiness,1,-0.0025,-0.0013
+unhappiness,deploy,control,2,2,q2,2,unhappiness,1,-0.0034,-0.0013
+unhappiness,deploy,control,0,13,q2,4,unhappiness,1,-0.0014,-0.0013
+unhappiness,deploy,control,1,5,q2,4,unhappiness,1,-0.0026,-0.0013
+unhappiness,deploy,control,2,2,q2,4,unhappiness,1,-0.0034,-0.0013
+unhappiness,deploy,control,0,13,q2,6,unhappiness,1,-0.0015,-0.0013
+unhappiness,deploy,control,1,5,q2,6,unhappiness,1,-0.0026,-0.0013
+unhappiness,deploy,control,2,2,q2,6,unhappiness,1,-0.0033,-0.0013
+unhappiness,deploy,control,0,13,q2,8,unhappiness,1,-0.0015,-0.0013
+unhappiness,deploy,control,1,5,q2,8,unhappiness,1,-0.0026,-0.0013
+unhappiness,deploy,control,2,2,q2,8,unhappiness,1,-0.0033,-0.0013
+unhappiness,deploy,control,0,13,q2,10,unhappiness,1,-0.0015,-0.0013
+unhappiness,deploy,control,1,5,q2,10,unhappiness,1,-0.0026,-0.0013
+unhappiness,deploy,control,2,2,q2,10,unhappiness,1,-0.0033,-0.0013
+unhappiness,deploy,control,0,13,q2,12,unhappiness,1,-0.0015,-0.0013
+unhappiness,deploy,control,1,5,q2,12,unhappiness,1,-0.0026,-0.0013
+unhappiness,deploy,control,2,2,q2,12,unhappiness,1,-0.0033,-0.0013
+unhappiness,deploy,control,0,13,q2,14,unhappiness,1,-0.0015,-0.0013
+unhappiness,deploy,control,1,5,q2,14,unhappiness,1,-0.0027,-0.0013
+unhappiness,deploy,control,2,2,q2,14,unhappiness,1,-0.0034,-0.0013
+unhappiness,deploy,control,0,13,q2,16,unhappiness,1,-0.0017,-0.0013
+unhappiness,deploy,control,1,5,q2,16,unhappiness,1,-0.0028,-0.0013
+unhappiness,deploy,control,2,2,q2,16,unhappiness,1,-0.0035,-0.0013
+unhappiness,deploy,control,0,13,q2,18,unhappiness,1,-0.0016,-0.0013
+unhappiness,deploy,control,1,5,q2,18,unhappiness,1,-0.0029,-0.0013
+unhappiness,deploy,control,2,2,q2,18,unhappiness,1,-0.0035,-0.0013
+unhappiness,deploy,control,0,13,q2,20,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,control,1,5,q2,20,unhappiness,1,-0.0036,-0.0013
+unhappiness,deploy,control,2,2,q2,20,unhappiness,1,-0.0036,-0.0013
+unhappiness,deploy,control,0,13,q2,22,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,control,1,5,q2,22,unhappiness,1,-0.0036,-0.0013
+unhappiness,deploy,control,2,2,q2,22,unhappiness,1,-0.0035,-0.0013
+unhappiness,deploy,control,0,13,q2,24,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,control,1,5,q2,24,unhappiness,1,-0.0036,-0.0013
+unhappiness,deploy,control,2,2,q2,24,unhappiness,1,-0.0035,-0.0013
+unhappiness,deploy,control,0,13,q2,26,unhappiness,1,-0.0019,-0.0013
+unhappiness,deploy,control,1,5,q2,26,unhappiness,1,-0.0035,-0.0013
+unhappiness,deploy,control,2,2,q2,26,unhappiness,1,-0.0035,-0.0013
+unhappiness,deploy,control,0,13,q2,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,1,5,q2,28,unhappiness,1,-0.0013,-0.0013
+unhappiness,deploy,control,2,2,q2,28,unhappiness,1,-0.0013,-0.0013

@@ -8,6 +8,8 @@
 #   ASSUME_YES=1 nohup bash run_exp3.sh > exp3.nohup 2>&1 &
 #   bash run_exp3.sh --resume                # continue an interrupted run
 #   bash run_exp3.sh --overwrite             # start over in an existing OUT dir
+#   OUT=results/needle_v2 bash run_exp3.sh   # keep an earlier run's folder (the first run,
+#                                            # before the quote-aware scoring, is invalid)
 #
 # Useful overrides (environment variables):
 #   N_PER_CLASS=20 bash run_exp3.sh          # quick pass (~30 min)

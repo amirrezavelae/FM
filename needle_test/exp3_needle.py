@@ -275,33 +275,65 @@ def prefill(model, ids):
     return cache
 
 
+QUOTES = "\"'“”"
+
+
+def make_token_tests(tok):
+    """is_quote(t): the token is a bare quote mark. is_stop(t): once quotes and
+    spaces are removed it is empty or '.', i.e. the answer has ended."""
+    cache = {}
+
+    def text(t):
+        if t not in cache:
+            cache[t] = tok.decode([t])
+        return cache[t]
+
+    def is_quote(t):
+        s = text(t).strip()
+        return len(s) == 1 and s in QUOTES
+
+    def is_stop(t):
+        return text(t).strip(QUOTES + " \n\t").strip() in ("", ".")
+
+    return is_quote, is_stop
+
+
 @torch.no_grad()
-def eval_condition(model, tok, cache, tail, target, stop_ids, positions, a, b, generate, max_new, needle):
-    """Teacher-forced exact match + NLL of the needle; optional greedy text."""
+def eval_condition(model, tok, cache, tail, target, tests, positions, a, b, generate, max_new, needle):
+    """Teacher-forced exact match + NLL of the needle; optional greedy text.
+
+    The base model usually opens its answer with a quote mark. If the argmax at
+    the first answer position is a quote, the quote is fed and the needle is scored
+    after it (the quote's own probability is not counted), so a formatting habit is
+    not mistaken for a retrieval failure. exact = every needle token is the argmax
+    AND the next argmax ends the answer ('.', newline or a closing quote)."""
+    is_quote, is_stop = tests
     hooks = DropHooks(model, positions, a, b) if positions else None
     try:
-        c = copy.deepcopy(cache)
-        lp = F.log_softmax(fwd(model, tail + target, c, len(target) + 1), -1)
+        T = len(target)
+        lp = F.log_softmax(fwd(model, tail + target, copy.deepcopy(cache), T + 1), -1)
+        a0 = int(lp[0].argmax())
+        quoted = a0 != target[0] and is_quote(a0)
+        if quoted:
+            lp = F.log_softmax(fwd(model, tail + [a0] + target, copy.deepcopy(cache), T + 1), -1)
         tgt = torch.tensor(target, device=lp.device)
-        am = lp[:-1].argmax(-1)
+        ok = lp[:-1].argmax(-1) == tgt
         nll = -lp[:-1].gather(1, tgt[:, None])[:, 0]
-        ok = (am == tgt)
-        stop_ok = int(lp[-1].argmax()) in stop_ids
+        stop_ok = is_stop(int(lp[-1].argmax()))
         res = {"exact": float(bool(ok.all()) and stop_ok), "nll": float(nll.sum()),
-               "first_ok": float(ok[0]), "frac_tok_ok": float(ok.float().mean())}
+               "first_ok": float(ok[0]), "frac_tok_ok": float(ok.float().mean()),
+               "quoted": float(quoted)}
         if generate:
             c2 = copy.deepcopy(cache)
             lg = fwd(model, tail, c2, 1)[-1]
             out = []
             for _ in range(max_new):
                 nxt = int(lg.argmax())
-                if nxt in stop_ids:
-                    break
                 out.append(nxt)
                 if "\n" in tok.decode(out):
                     break
                 lg = fwd(model, [nxt], c2, 1)[-1]
-            text = re.split(r"[.\n]", tok.decode(out))[0].strip()
+            text = re.split(r"[.\n]", tok.decode(out))[0].strip().strip(QUOTES).strip()
             res["gen"] = text
             res["gen_exact"] = float(text == needle)
         return res
@@ -311,7 +343,8 @@ def eval_condition(model, tok, cache, tail, target, stop_ids, positions, a, b, g
 
 
 def mean_res(rs):
-    out = {k: float(np.mean([r[k] for r in rs])) for k in ("exact", "nll", "first_ok", "frac_tok_ok")}
+    out = {k: float(np.mean([r[k] for r in rs]))
+           for k in ("exact", "nll", "first_ok", "frac_tok_ok", "quoted")}
     if "gen_exact" in rs[0]:
         out["gen_exact"] = float(np.mean([r["gen_exact"] for r in rs]))
     return out
@@ -331,17 +364,13 @@ def prior_nll(model, tok, needle, target_ids):
 def run_prompt(model, tok, P, nd, depth, variant, windows, conds, args, pid, prior):
     ids, t0, t1, n = P["ids"], P["t0"], P["t1"], P["n"]
     target = ids[t0: t1 + 1]
-    stop_ids = {ids[t1 + 1]} if t1 + 1 < n else set()
-    for s in (".", "\n", ".\n"):
-        e = tok(s, add_special_tokens=False)["input_ids"]
-        if len(e) == 1:
-            stop_ids.add(e[0])
+    tests = make_token_tests(tok)
     split = n - 1 if variant == "deploy" else t1 + 1
     cache = prefill(model, ids[:split])
     tail = ids[split:]
     sets, rand = make_positions(P, nd["word"], args, pid, variant)
 
-    full = eval_condition(model, tok, cache, tail, target, stop_ids, [], 0, 1, True,
+    full = eval_condition(model, tok, cache, tail, target, tests, [], 0, 1, True,
                           args.max_new_tokens, nd["word"])
     rec = {"exp": EXP, "id": pid, "variant": variant, "needle": nd["word"], "cls": nd["cls"],
            "depth": depth, "n_pieces": len(target), "prompt_len": n,
@@ -352,12 +381,12 @@ def run_prompt(model, tok, P, nd, depth, variant, windows, conds, args, pid, pri
         wr = {}
         for cond in conds:
             if cond in RANDOM_CONDS:
-                rs = [eval_condition(model, tok, cache, tail, target, stop_ids, p, a, b,
+                rs = [eval_condition(model, tok, cache, tail, target, tests, p, a, b,
                                      args.generate_all, args.max_new_tokens, nd["word"])
                       for p in rand[cond]]
                 wr[cond] = mean_res(rs)
             else:
-                wr[cond] = eval_condition(model, tok, cache, tail, target, stop_ids, sets[cond],
+                wr[cond] = eval_condition(model, tok, cache, tail, target, tests, sets[cond],
                                           a, b, args.generate_all, args.max_new_tokens, nd["word"])
         rec["results"][wtag(a, b)] = wr
     return rec
@@ -412,6 +441,17 @@ def summarize(out_dir, args):
     if not recs:
         print("no records")
         return
+    _summarize(recs, out_dir, args, "")
+    ok = [r for r in recs if r["full"]["exact"] == 1.0]
+    if 0 < len(ok) < len(recs):
+        print("\n" + "#" * 100)
+        print(f"RESTRICTED TO PROMPTS WHERE FULL SUCCEEDED ({len(ok)} of {len(recs)}): "
+              "the usual way to measure what dropping the KV costs, since a prompt "
+              "the clean model already misses cannot show retention. Files end in _fullok.")
+        _summarize(ok, out_dir, args, "_fullok")
+
+
+def _summarize(recs, out_dir, args, suffix):
     priors = sorted({r["needle"]: r["prior_nll"] for r in recs if r.get("prior_nll") is not None}.values())
     q1, q2 = (np.quantile(priors, [1 / 3, 2 / 3]) if priors else (0, 0))
 
@@ -457,20 +497,20 @@ def summarize(out_dir, args):
         rows.append({"variant": var, "window": w, "condition": cond, "group_type": gt, "group": g,
                      "n": len(e), "exact": est, "ci_lo": lo, "ci_hi": hi,
                      "d_nll": dm, "d_nll_lo": dlo, "d_nll_hi": dhi})
-    E.write_csv(os.path.join(out_dir, "exp3_summary.csv"), rows)
+    E.write_csv(os.path.join(out_dir, f"exp3_summary{suffix}.csv"), rows)
 
     prow = []
     for (var, w, cmp_, gt, g), (diffs, nds) in sorted(pair_acc.items()):
         est, lo, hi = cluster_ratio_ci(diffs, np.ones(len(diffs)), nds, args.bootstrap)
         prow.append({"variant": var, "window": w, "comparison": cmp_, "group_type": gt, "group": g,
                      "n": len(diffs), "mean_diff": est, "ci_lo": lo, "ci_hi": hi})
-    E.write_csv(os.path.join(out_dir, "exp3_paired.csv"), prow)
+    E.write_csv(os.path.join(out_dir, f"exp3_paired{suffix}.csv"), prow)
 
     nrow = {}
     for r in recs:
         nrow[r["needle"]] = {"needle": r["needle"], "class": r["cls"], "n_pieces": r["n_pieces"],
                              "prior_nll": r.get("prior_nll")}
-    E.write_csv(os.path.join(out_dir, "exp3_needles.csv"), list(nrow.values()))
+    E.write_csv(os.path.join(out_dir, f"exp3_needles{suffix}.csv"), list(nrow.values()))
 
     # ---------------- console ------------------------------------------------ #
     S = {(r["variant"], r["window"], r["condition"], r["group_type"], r["group"]): r for r in rows}
@@ -486,6 +526,10 @@ def summarize(out_dir, args):
         gen = [r["full"].get("gen_exact") for r in recs if r["variant"] == var and "gen_exact" in r["full"]]
         if gen:
             print(f"          Full exact match (real greedy generation):  {np.mean(gen):.3f}")
+        qd = [r["full"]["quoted"] for r in recs if r["variant"] == var and "quoted" in r["full"]]
+        if qd:
+            print(f"          Full answers that open with a quote mark:   {np.mean(qd):.3f} "
+                  "(handled: the needle is scored after the quote)")
 
         def cell(cond, gt, g, w):
             r = S.get((var, w, cond, gt, g))

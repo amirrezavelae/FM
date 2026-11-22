@@ -32,7 +32,11 @@ A rare multi-token word (the needle) is hidden in about 2,000 tokens of WikiText
 
 ## Scoring
 
-One teacher-forced pass per condition. `exact` means the argmax at every needle token equals the needle and the next argmax is a stop token (`.` or newline). That is the same as "greedy decoding reproduces the needle". The Full run also does real greedy generation (up to 10 tokens) as a cross-check, and `--generate_all` does it for every condition. The summary also reports the change in needle log-loss (`d_nll`).
+One teacher-forced pass per condition. `exact` means the argmax at every needle token equals the needle and the next argmax ends the answer (`.`, newline or a closing quote). That is the same as "greedy decoding reproduces the needle".
+
+**Quote handling.** Qwen2.5-7B base opens its answer with a `"` in about 97% of prompts (`The secret word is "vertebrae`). The first version scored that as a miss and reported 3% Full accuracy, although stripping the quote gave 331 of 360 correct. Now, if the argmax at the first answer position is a quote, the quote is fed and the needle is scored after it; the quote's own probability is not counted. The summary prints the share of Full answers that open with a quote.
+
+**Full-succeeded restriction.** A prompt the clean model already misses cannot show whether dropping KV costs anything. The summary is therefore printed twice: on all prompts, and on the prompts where Full succeeded (files ending in `_fullok`). Read the second one for retention. The Full run also does real greedy generation (up to 10 tokens) as a cross-check, and `--generate_all` does it for every condition. The summary also reports the change in needle log-loss (`d_nll`).
 
 ## Variants
 
@@ -57,6 +61,7 @@ It first prints the needles and 6 sample prompts (CPU only) and asks you to conf
 | `exp3_summary.csv` | exact match and `d_nll` with 95% CIs, by variant, window, condition and group (all, class, depth, pieces, prior tercile) |
 | `exp3_paired.csv` | paired differences: `needle_prefix − random_hay`, `needle_prefix − full`, `needle_last − needle_prefix`, `all_words − random_all` |
 | `exp3_needles.csv` | every needle with its class, pieces and `prior_nll` |
+| `*_fullok.csv` | the same summary, paired and needle tables restricted to prompts where Full succeeded |
 | `exp3_meta.json` | arguments, versions, check results |
 | `preview.txt` | the needle and prompt preview |
 

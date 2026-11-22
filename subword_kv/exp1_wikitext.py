@@ -172,6 +172,7 @@ def continuation_logits(model, cache, cont_ids, positions, start_layer):
             hooks.remove()
 
 
+@torch.no_grad()
 def hook_check(model, ctx_ids, cont_ids, tol):
     """Check 1: the hook with an empty drop list must reproduce the default
     logits; a large drop must visibly change them (the hook is really active)."""
@@ -211,7 +212,7 @@ def mean_metrics(ms):
     return {k: float(np.mean([m[k] for m in ms])) for k in METRICS}
 
 
-@torch.inference_mode()
+@torch.no_grad()
 def run_chunk(model, art, chunk, dropped, excluded, ours, args):
     lo, C, L = chunk["lo"], args.ctx_len, args.cont_len
     ctx_ids = art.ids[lo: lo + C]

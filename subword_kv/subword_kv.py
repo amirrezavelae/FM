@@ -134,11 +134,13 @@ class DropHooks:
     `positions` list the mask is plain causal (used by the hook check).
     """
 
-    def __init__(self, model, positions, start_layer):
+    def __init__(self, model, positions, start_layer, end_layer=None):
+        # Layers start_layer .. end_layer-1 (end_layer=None: through the last layer).
         self.handles = []
         self.positions = sorted(set(int(p) for p in positions))
         layers = model.model.layers
-        for i in range(start_layer, len(layers)):
+        end = len(layers) if end_layer is None else end_layer
+        for i in range(start_layer, end):
             self.handles.append(layers[i].self_attn.register_forward_pre_hook(
                 self._make_hook(i), with_kwargs=True))
 

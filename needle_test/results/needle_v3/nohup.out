@@ -1,0 +1,160 @@
+nohup: ignoring input
+120 needles, 40 filler articles (of 62), depths [0.1, 0.5, 0.9], windows ['0:16', '0:24', '16:28', '24:28', '0:28'], variants ['deploy']
+
+NEEDLES
+  common   n= 40  pieces: mean 2.5, 3+: 13   e.g. vertebrae(3), ironclads(3), cemeteries(4), temnospondyls(5), battalions(3), temnospondyl(4), extratropical(3), epoxidation(3)
+  rare     n= 40  pieces: mean 2.7, 3+: 25   e.g. headhunting(3), ridgelines(3), trisikads(4), dioxiranes(4), befriended(3), longirostrine(4), paramilitaries(3), invertebrates(3)
+  novel    n= 40  pieces: mean 4.2, 3+: 39   e.g. nirmetufapim(6), leligago(3), zozure(3), vopetiszo(5), nazepabeval(4), vorepuse(4), lestenmivenfel(5), dazonkageva(5)
+
+PROMPTS
+  [common] vertebrae depth=0.1 len=2018 pieces=[' vert', 'ebra', 'e'] positions=282-284  k_prefix=2 k_all_words=109
+      context: '0 years . \nThe secret word is vertebrae.\n The series'
+      question: '\n\nWhat is the secret word? The secret word is'
+  [common] ironclads depth=0.9 len=2017 pieces=[' iron', 'cl', 'ads'] positions=1812-1814  k_prefix=2 k_all_words=27
+      context: ' defend . " \nThe secret word is ironclads.\n Stevens prefers'
+      question: ' "\n\nWhat is the secret word? The secret word is'
+  [common] cemeteries depth=0.1 len=2019 pieces=[' c', 'em', 'eter', 'ies'] positions=128-131  k_prefix=3 k_all_words=191
+      context: ' = = = \nThe secret word is cemeteries.\n In late'
+      question: '\n\nWhat is the secret word? The secret word is'
+  [common] temnospondyls depth=0.5 len=2018 pieces=[' tem', 'nos', 'pond', 'yl', 's'] positions=845-849  k_prefix=4 k_all_words=154
+      context: ' method = = \nThe secret word is temnospondyls.\n In a'
+      question: ' .\n\nWhat is the secret word? The secret word is'
+  [common] battalions depth=0.1 len=2017 pieces=[' batt', 'al', 'ions'] positions=173-175  k_prefix=2 k_all_words=122
+      context: ' and track . \nThe secret word is battalions.\n It is'
+      question: ' .\n\nWhat is the secret word? The secret word is'
+  [common] temnospondyl depth=0.5 len=2019 pieces=[' tem', 'nos', 'pond', 'yl'] positions=1125-1128  k_prefix=3 k_all_words=120
+      context: '0 years . \nThe secret word is temnospondyl.\n The series'
+      question: '\n\nWhat is the secret word? The secret word is'
+/mnt/hdd/mahdi/anaconda3/envs/kvpilot/lib/python3.11/site-packages/torch/cuda/__init__.py:734: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+120 needles, 40 filler articles (of 62), depths [0.1, 0.5, 0.9], windows ['0:16', '0:24', '16:28', '24:28', '0:28'], variants ['deploy']
+resuming: 174 prompts already done
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<04:59,  1.13it/s]Loading weights:   1%|          | 2/339 [00:01<03:51,  1.46it/s]Loading weights:   5%|▍         | 16/339 [00:01<00:22, 14.39it/s]Loading weights:   8%|▊         | 28/339 [00:02<00:15, 19.49it/s]Loading weights:  12%|█▏        | 40/339 [00:02<00:11, 25.77it/s]Loading weights:  15%|█▌        | 52/339 [00:02<00:09, 31.17it/s]Loading weights:  19%|█▉        | 64/339 [00:02<00:07, 36.87it/s]Loading weights:  22%|██▏       | 76/339 [00:03<00:06, 38.57it/s]Loading weights:  26%|██▌       | 88/339 [00:03<00:06, 40.14it/s]Loading weights:  29%|██▉       | 100/339 [00:03<00:05, 44.16it/s]Loading weights:  31%|███       | 105/339 [00:03<00:05, 41.97it/s]Loading weights:  33%|███▎      | 112/339 [00:03<00:05, 44.09it/s]Loading weights:  35%|███▍      | 117/339 [00:04<00:05, 43.36it/s]Loading weights:  37%|███▋      | 124/339 [00:04<00:05, 40.80it/s]Loading weights:  40%|████      | 136/339 [00:04<00:04, 40.87it/s]Loading weights:  44%|████▎     | 148/339 [00:04<00:04, 45.14it/s]Loading weights:  45%|████▌     | 153/339 [00:04<00:04, 42.55it/s]Loading weights:  47%|████▋     | 160/339 [00:05<00:04, 39.52it/s]Loading weights:  51%|█████     | 172/339 [00:05<00:04, 40.21it/s]Loading weights:  54%|█████▍    | 184/339 [00:05<00:04, 38.04it/s]Loading weights:  58%|█████▊    | 196/339 [00:05<00:03, 46.23it/s]Loading weights:  60%|█████▉    | 202/339 [00:06<00:03, 44.83it/s]Loading weights:  62%|██████▏   | 209/339 [00:06<00:02, 44.46it/s]Loading weights:  65%|██████▍   | 220/339 [00:06<00:02, 45.62it/s]Loading weights:  68%|██████▊   | 231/339 [00:06<00:01, 55.90it/s]Loading weights:  70%|███████   | 238/339 [00:06<00:02, 45.14it/s]Loading weights:  72%|███████▏  | 244/339 [00:07<00:02, 38.08it/s]Loading weights:  76%|███████▌  | 256/339 [00:07<00:02, 40.56it/s]Loading weights:  79%|███████▉  | 268/339 [00:07<00:01, 44.78it/s]Loading weights:  81%|████████  | 273/339 [00:07<00:01, 43.32it/s]Loading weights:  83%|████████▎ | 280/339 [00:07<00:01, 44.12it/s]Loading weights:  84%|████████▍ | 285/339 [00:07<00:01, 44.20it/s]Loading weights:  86%|████████▌ | 292/339 [00:08<00:01, 34.21it/s]Loading weights:  90%|████████▉ | 304/339 [00:08<00:00, 46.61it/s]Loading weights:  91%|█████████▏| 310/339 [00:08<00:00, 48.57it/s]Loading weights:  93%|█████████▎| 316/339 [00:08<00:00, 37.83it/s]Loading weights:  97%|█████████▋| 328/339 [00:08<00:00, 49.49it/s]Loading weights:  99%|█████████▊| 334/339 [00:08<00:00, 49.47it/s]Loading weights: 100%|██████████| 339/339 [00:08<00:00, 37.82it/s]
+[check 1] hook check: {'empty_drop_vs_default_maxdiff': 0.0, 'empty_drop_argmax_equal': True, 'big_drop_vs_default_maxdiff': 16.948617935180664, 'ok': True}
+[check 1b] window check: {'A_window_full_vs_old_s0': 0.0, 'B_window_last_vs_old_s_last': 0.0, 'C_layer0_only_vs_plain': 1.84737229347229, 'D_lower_half_vs_plain': 11.607486724853516, 'D_upper_half_vs_plain': 11.339996337890625, 'ok': True}
+  10/360 prompts  8.4s/prompt  last: impeachments (rare) full_exact=1
+  20/360 prompts  8.3s/prompt  last: compounding (rare) full_exact=1
+  30/360 prompts  8.1s/prompt  last: dissimilar (rare) full_exact=1
+  40/360 prompts  8.1s/prompt  last: nobiliter (rare) full_exact=0
+  50/360 prompts  8.1s/prompt  last: obsolescent (rare) full_exact=0
+  60/360 prompts  8.1s/prompt  last: indescribable (rare) full_exact=1
+  70/360 prompts  8.1s/prompt  last: leligago (novel) full_exact=1
+  80/360 prompts  8.2s/prompt  last: nazepabeval (novel) full_exact=1
+  90/360 prompts  8.3s/prompt  last: dazonkageva (novel) full_exact=1
+  100/360 prompts  8.3s/prompt  last: tomfuko (novel) full_exact=1
+  110/360 prompts  8.3s/prompt  last: gulfimikirka (novel) full_exact=1
+  120/360 prompts  8.4s/prompt  last: rontefibumu (novel) full_exact=0
+  130/360 prompts  8.4s/prompt  last: vomtigolta (novel) full_exact=1
+  140/360 prompts  8.5s/prompt  last: gespomdi (novel) full_exact=1
+  150/360 prompts  8.5s/prompt  last: bereka (novel) full_exact=1
+  160/360 prompts  8.5s/prompt  last: lukatokata (novel) full_exact=1
+  170/360 prompts  8.6s/prompt  last: forigerdodes (novel) full_exact=1
+  180/360 prompts  8.6s/prompt  last: lenbepevomgim (novel) full_exact=1
+186 prompts run, 0 skipped
+
+====================================================================================================
+variant: deploy   prompts: 360   needles: 120
+[check 3] Full exact match (teacher-forced): 0.894  -> should be near 1.0; if not, fix the prompt before trusting anything
+          Full exact match (real greedy generation):  0.919
+          Full answers that open with a quote mark:   0.969 (handled: the needle is scored after the quote)
+
+Exact match by condition (all prompts); Full = 0.89
+  condition           0:16     0:24     0:28    16:28    24:28
+  needle_prefix       0.49     0.35     0.12     0.16     0.44
+  needle_last         0.87     0.21     0.13     0.18     0.86
+  needle_all          0.29     0.03     0.00     0.00     0.23
+  random_hay          0.89     0.89     0.89     0.89     0.89
+  all_words           0.47     0.34     0.16     0.21     0.49
+  random_all          0.90     0.90     0.90     0.90     0.89
+
+needle_prefix - random_hay (exact match, article/needle-clustered 95% CI):
+    0:16: -0.408 [-0.478, -0.328]
+    0:24: -0.542 [-0.614, -0.467]
+    0:28: -0.775 [-0.828, -0.717]
+   16:28: -0.733 [-0.789, -0.675]
+   24:28: -0.456 [-0.517, -0.392]
+
+needle_prefix exact match by needle class   (Full / needle_prefix per window; random_hay in brackets)
+  group         n   Full            0:16            0:24            0:28           16:28           24:28
+  common      120   0.94     0.74 [0.94]     0.59 [0.94]     0.23 [0.94]     0.30 [0.94]     0.57 [0.94]
+  novel       120   0.88     0.17 [0.88]     0.04 [0.88]     0.00 [0.88]     0.00 [0.88]     0.27 [0.88]
+  rare        120   0.86     0.54 [0.86]     0.42 [0.86]     0.12 [0.86]     0.18 [0.86]     0.48 [0.86]
+
+needle_prefix exact match by pieces in the needle   (Full / needle_prefix per window; random_hay in brackets)
+  group         n   Full            0:16            0:24            0:28           16:28           24:28
+  2           129   0.90     0.81 [0.90]     0.71 [0.90]     0.27 [0.90]     0.31 [0.90]     0.52 [0.90]
+  3           123   0.89     0.45 [0.89]     0.26 [0.89]     0.07 [0.89]     0.15 [0.89]     0.48 [0.89]
+  4+          108   0.90     0.14 [0.90]     0.04 [0.90]     0.00 [0.90]     0.00 [0.90]     0.30 [0.90]
+
+needle_prefix exact match by depth   (Full / needle_prefix per window; random_hay in brackets)
+  group         n   Full            0:16            0:24            0:28           16:28           24:28
+  0.1         120   0.88     0.43 [0.88]     0.28 [0.88]     0.07 [0.88]     0.10 [0.88]     0.34 [0.88]
+  0.5         120   0.89     0.50 [0.89]     0.39 [0.89]     0.12 [0.89]     0.21 [0.89]     0.53 [0.89]
+  0.9         120   0.91     0.53 [0.91]     0.39 [0.91]     0.16 [0.91]     0.17 [0.91]     0.45 [0.91]
+
+needle_prefix exact match by prior_nll tercile (low = easy for the model)   (Full / needle_prefix per window; random_hay in brackets)
+  group         n   Full            0:16            0:24            0:28           16:28           24:28
+  high        120   0.88     0.12 [0.88]     0.02 [0.88]     0.00 [0.88]     0.00 [0.88]     0.28 [0.88]
+  low         120   0.88     0.75 [0.88]     0.60 [0.88]     0.24 [0.88]     0.30 [0.88]     0.56 [0.88]
+  mid         120   0.92     0.58 [0.92]     0.44 [0.92]     0.12 [0.92]     0.18 [0.92]     0.47 [0.92]
+
+####################################################################################################
+RESTRICTED TO PROMPTS WHERE FULL SUCCEEDED (322 of 360): the usual way to measure what dropping the KV costs, since a prompt the clean model already misses cannot show retention. Files end in _fullok.
+
+====================================================================================================
+variant: deploy   prompts: 322   needles: 118
+[check 3] Full exact match (teacher-forced): 1.000  -> should be near 1.0; if not, fix the prompt before trusting anything
+          Full exact match (real greedy generation):  1.000
+          Full answers that open with a quote mark:   0.966 (handled: the needle is scored after the quote)
+
+Exact match by condition (all prompts); Full = 1.00
+  condition           0:16     0:24     0:28    16:28    24:28
+  needle_prefix       0.54     0.39     0.13     0.18     0.48
+  needle_last         0.98     0.24     0.14     0.20     0.96
+  needle_all          0.33     0.03     0.00     0.00     0.25
+  random_hay          1.00     1.00     1.00     1.00     1.00
+  all_words           0.52     0.38     0.17     0.23     0.53
+  random_all          1.00     1.00     0.99     0.99     0.99
+
+needle_prefix - random_hay (exact match, article/needle-clustered 95% CI):
+    0:16: -0.460 [-0.541, -0.379]
+    0:24: -0.606 [-0.687, -0.530]
+    0:28: -0.866 [-0.913, -0.815]
+   16:28: -0.820 [-0.872, -0.765]
+   24:28: -0.516 [-0.580, -0.449]
+
+needle_prefix exact match by needle class   (Full / needle_prefix per window; random_hay in brackets)
+  group         n   Full            0:16            0:24            0:28           16:28           24:28
+  common      113   1.00     0.79 [1.00]     0.63 [1.00]     0.25 [1.00]     0.32 [1.00]     0.59 [1.00]
+  novel       106   1.00     0.20 [1.00]     0.05 [1.00]     0.00 [1.00]     0.00 [1.00]     0.29 [1.00]
+  rare        103   1.00     0.62 [1.00]     0.50 [1.00]     0.15 [1.00]     0.21 [1.00]     0.56 [1.00]
+
+needle_prefix exact match by pieces in the needle   (Full / needle_prefix per window; random_hay in brackets)
+  group         n   Full            0:16            0:24            0:28           16:28           24:28
+  2           116   1.00     0.90 [1.00]     0.78 [1.00]     0.30 [1.00]     0.34 [1.00]     0.58 [1.00]
+  3           109   1.00     0.50 [1.00]     0.29 [1.00]     0.07 [1.00]     0.17 [1.00]     0.53 [1.00]
+  4+           97   1.00     0.15 [1.00]     0.04 [1.00]     0.00 [1.00]     0.00 [1.00]     0.32 [1.00]
+
+needle_prefix exact match by depth   (Full / needle_prefix per window; random_hay in brackets)
+  group         n   Full            0:16            0:24            0:28           16:28           24:28
+  0.1         106   1.00     0.49 [1.00]     0.31 [1.00]     0.08 [1.00]     0.11 [1.00]     0.39 [1.00]
+  0.5         107   1.00     0.55 [1.00]     0.44 [1.00]     0.14 [1.00]     0.23 [1.00]     0.57 [1.00]
+  0.9         109   1.00     0.58 [1.00]     0.43 [1.00]     0.17 [1.00]     0.19 [1.00]     0.50 [1.00]
+
+needle_prefix exact match by prior_nll tercile (low = easy for the model)   (Full / needle_prefix per window; random_hay in brackets)
+  group         n   Full            0:16            0:24            0:28           16:28           24:28
+  high        109   1.00     0.14 [1.00]     0.02 [1.00]     0.00 [1.00]     0.00 [1.00]     0.31 [1.00]
+  low         106   1.00     0.85 [1.00]     0.68 [1.00]     0.27 [1.00]     0.34 [1.00]     0.62 [1.00]
+  mid         107   1.00     0.64 [1.00]     0.50 [1.00]     0.13 [1.00]     0.21 [1.00]     0.52 [1.00]
+done. results in results/needle_v3:
+exp3_examples.jsonl
+exp3_meta.json
+exp3_needles.csv
+exp3_needles_fullok.csv
+exp3_paired.csv
+exp3_paired_fullok.csv
+exp3_summary.csv
+exp3_summary_fullok.csv
+nohup.out
+preview.txt
+run.log

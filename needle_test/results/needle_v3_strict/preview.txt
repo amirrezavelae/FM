@@ -1,0 +1,26 @@
+30 needles, 40 filler articles (of 62), depths [0.1, 0.5, 0.9], windows ['0:16', '24:28'], variants ['strict']
+
+NEEDLES
+  common   n= 10  pieces: mean 2.4, 3+: 3   e.g. vertebrae(3), ironclads(3), cemeteries(4), strikeout(2), batters(2), excavated(2), amphibious(2), convection(2)
+  rare     n= 10  pieces: mean 2.6, 3+: 6   e.g. headhunting(3), dignitaries(3), nucleophilic(3), malnutrition(2), materialist(2), slandering(2), expediency(3), extraterrestrial(3)
+  novel    n= 10  pieces: mean 3.7, 3+: 10   e.g. nirmetufapim(6), leligago(3), zozure(3), sosuvurma(3), bovuszi(4), vapagoganlo(4), vofavu(4), lagukamu(3)
+
+PROMPTS
+  [common] vertebrae depth=0.1 len=2018 pieces=[' vert', 'ebra', 'e'] positions=282-284  k_prefix=2 k_all_words=109
+      context: '0 years . \nThe secret word is vertebrae.\n The series'
+      question: '\n\nWhat is the secret word? The secret word is'
+  [common] ironclads depth=0.9 len=2017 pieces=[' iron', 'cl', 'ads'] positions=1812-1814  k_prefix=2 k_all_words=27
+      context: ' defend . " \nThe secret word is ironclads.\n Stevens prefers'
+      question: ' "\n\nWhat is the secret word? The secret word is'
+  [common] cemeteries depth=0.1 len=2019 pieces=[' c', 'em', 'eter', 'ies'] positions=128-131  k_prefix=3 k_all_words=191
+      context: ' = = = \nThe secret word is cemeteries.\n In late'
+      question: '\n\nWhat is the secret word? The secret word is'
+  [common] strikeout depth=0.5 len=2016 pieces=[' strike', 'out'] positions=996-997  k_prefix=1 k_all_words=195
+      context: ' verse forms . \nThe secret word is strikeout.\n In an'
+      question: '\n\nWhat is the secret word? The secret word is'
+  [common] batters depth=0.1 len=2017 pieces=[' b', 'atters'] positions=344-345  k_prefix=1 k_all_words=101
+      context: ' 2 . \nThe secret word is batters.\n The hurricane'
+      question: '\n\nWhat is the secret word? The secret word is'
+  [common] excavated depth=0.5 len=2017 pieces=[' excav', 'ated'] positions=877-878  k_prefix=1 k_all_words=125
+      context: ' salvation . " \nThe secret word is excavated.\n The film'
+      question: '\n\nWhat is the secret word? The secret word is'
